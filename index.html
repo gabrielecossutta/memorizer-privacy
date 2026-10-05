@@ -1,6 +1,11 @@
-<title>Privacy Policy — Memorizer</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="doc-title">Privacy Policy — Memorizer</title>
 
-<meta name="description" content="Privacy Policy di Memorizer, applicazione Android pubblicata da G Drako Interactive.">
+<meta id="doc-desc" name="description" content="Privacy Policy of Memorizer, an Android application published by G Drako Interactive.">
 <meta name="author" content="G Drako Interactive">
 
 <style>
@@ -56,11 +61,50 @@
         color: white;
         padding: 56px 20px;
         text-align: center;
+        position: relative;
     }
 
     .header-content {
         max-width: var(--max-width);
         margin: 0 auto;
+    }
+
+    /* Selector lingua in alto a destra */
+    .lang-selector-container {
+        position: absolute;
+        top: 16px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(8px);
+        padding: 6px 12px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .lang-selector-container label {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #ffffff;
+    }
+
+    .lang-selector-container select {
+        background: #ffffff;
+        color: var(--text);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 4px 10px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        outline: none;
+        transition: all 0.2s ease;
+    }
+
+    .lang-selector-container select:hover {
+        background: #f0f0f0;
     }
 
     .app-name {
@@ -213,12 +257,6 @@
         margin-bottom: 5px;
     }
 
-    .back-to-top {
-        display: inline-block;
-        margin-top: 8px;
-        font-size: 0.9rem;
-    }
-
     footer {
         text-align: center;
         color: var(--text-light);
@@ -232,7 +270,13 @@
 
     @media (max-width: 700px) {
         .header {
-            padding: 42px 18px;
+            padding: 52px 18px 36px;
+        }
+
+        .lang-selector-container {
+            top: 10px;
+            right: 10px;
+            padding: 4px 8px;
         }
 
         .app-name {
@@ -270,543 +314,1207 @@
         }
     }
 </style>
+</head>
+<body>
 
-</head> <body> <header class="header"> <div class="header-content"> <h1 class="app-name">Memorizer</h1> <p class="developer">Privacy Policy · G Drako Interactive</p> </div> </header> <main class="container">
-
-  <article class="content">
-
-    <div class="intro">
-        <h1>Privacy Policy</h1>
-        <p class="updated">Ultimo aggiornamento: 5 ottobre 2026</p>
+<header class="header">
+    <div class="lang-selector-container">
+        <label for="languageSelect">🌐 Language:</label>
+        <select id="languageSelect" onchange="changeLanguage(this.value)">
+            <option value="en" selected>English</option>
+            <option value="it">Italiano</option>
+            <option value="fr">Français</option>
+            <option value="es">Español</option>
+            <option value="de">Deutsch</option>
+        </select>
     </div>
 
-    <nav class="toc" aria-label="Indice della Privacy Policy">
-        <h2>Indice</h2>
-        <ol>
-            <li><a href="#titolare">Titolare e sviluppatore</a></li>
-            <li><a href="#generali">Informazioni generali</a></li>
-            <li><a href="#locale">Dati memorizzati localmente</a></li>
-            <li><a href="#ia">Valutazione tramite intelligenza artificiale</a></li>
-            <li><a href="#ads">Pubblicità e Google Mobile Ads</a></li>
-            <li><a href="#non-raccolti">Dati non raccolti direttamente</a></li>
-            <li><a href="#finalita">Finalità del trattamento</a></li>
-            <li><a href="#base-giuridica">Base giuridica</a></li>
-            <li><a href="#conservazione">Conservazione dei dati</a></li>
-            <li><a href="#sicurezza">Sicurezza</a></li>
-            <li><a href="#terze-parti">Condivisione con terze parti</a></li>
-            <li><a href="#diritti">Diritti degli utenti</a></li>
-            <li><a href="#minori">Minori</a></li>
-            <li><a href="#servizi">Servizi e informative di terze parti</a></li>
-            <li><a href="#modifiche">Modifiche alla Privacy Policy</a></li>
-            <li><a href="#contatti">Contatti</a></li>
-            <li><a href="#app">Informazioni sull'applicazione</a></li>
-        </ol>
-    </nav>
+    <div class="header-content">
+        <h1 class="app-name">Memorizer</h1>
+        <p class="developer">Privacy Policy · G Drako Interactive</p>
+    </div>
+</header>
 
-    <section id="titolare">
-        <h2>1. Titolare e sviluppatore</h2>
+<main class="container">
+    <article class="content">
 
-        <p>
-            La presente Privacy Policy descrive le modalità con cui
-            l'applicazione mobile <strong>Memorizer</strong> gestisce i dati
-            degli utenti.
-        </p>
-
-        <div class="contact">
-            <strong>Sviluppatore</strong>
-            G Drako Interactive
-
-            <br><br>
-
-            <strong>Email di contatto</strong>
-            <a href="mailto:g.drako.interactive@gmail.com">
-                g.drako.interactive@gmail.com
-            </a>
+        <div class="intro">
+            <h1 id="title-main">Privacy Policy</h1>
+            <p class="updated" id="last-updated">Last updated: October 5, 2026</p>
         </div>
 
-        <p>
-            Per qualsiasi domanda relativa alla privacy o al trattamento
-            dei dati è possibile contattare lo sviluppatore utilizzando
-            l'indirizzo email sopra indicato.
-        </p>
-    </section>
-
-    <section id="generali">
-        <h2>2. Informazioni generali</h2>
-
-        <p>
-            Memorizer è un'applicazione per dispositivi Android progettata
-            per aiutare l'utente nello studio e nella memorizzazione
-            tramite domande, risposte, categorie, valutazioni e
-            funzionalità di ripasso.
-        </p>
-
-        <p>
-            L'applicazione non richiede la creazione di un account e non
-            richiede registrazione, nome, indirizzo email o password per
-            essere utilizzata.
-        </p>
-
-        <p>
-            I dati creati direttamente dall'utente all'interno
-            dell'applicazione vengono normalmente conservati localmente
-            sul dispositivo.
-        </p>
-
-        <p>
-            Alcune funzionalità utilizzano tuttavia servizi di terze parti,
-            in particolare:
-        </p>
-
-        <ul>
-            <li>TypeSafe AI per la valutazione delle risposte tramite intelligenza artificiale;</li>
-            <li>Google Mobile Ads / AdMob per la pubblicità.</li>
-        </ul>
-
-        <p>
-            L'utilizzo di queste funzionalità può comportare il trasferimento
-            e il trattamento di determinati dati al di fuori del dispositivo.
-        </p>
-    </section>
-
-    <section id="locale">
-        <h2>3. Dati memorizzati localmente sul dispositivo</h2>
-
-        <p>
-            Le informazioni create e utilizzate dall'utente all'interno
-            di Memorizer possono includere:
-        </p>
-
-        <ul>
-            <li>domande;</li>
-            <li>risposte;</li>
-            <li>categorie;</li>
-            <li>valutazioni e voti;</li>
-            <li>immagini associate alle domande;</li>
-            <li>impostazioni dell'applicazione;</li>
-            <li>impostazioni relative alle notifiche e agli orari di ripasso;</li>
-            <li>altre informazioni necessarie al funzionamento dell'applicazione.</li>
-        </ul>
-
-        <div class="info-box">
-            <strong>Archiviazione locale</strong><br>
-            Questi dati vengono conservati localmente nell'area dati
-            dell'applicazione sul dispositivo dell'utente.
-        </div>
-
-        <p>
-            G Drako Interactive non gestisce un proprio server o database
-            remoto per la conservazione di questi contenuti personali
-            dell'utente.
-        </p>
-
-        <p>
-            La disinstallazione dell'applicazione o la cancellazione dei
-            dati dell'applicazione tramite le impostazioni del dispositivo
-            può comportare la cancellazione dei dati memorizzati localmente.
-        </p>
-    </section>
-
-    <section id="ia">
-        <h2>4. Valutazione delle risposte tramite intelligenza artificiale</h2>
-
-        <p>
-            Memorizer offre una funzionalità che permette di utilizzare
-            un servizio di intelligenza artificiale per valutare una
-            risposta fornita dall'utente.
-        </p>
-
-        <div class="info-box">
-            <strong>Quando viene utilizzata l'IA?</strong><br>
-            Le informazioni vengono trasmesse al servizio IA quando
-            l'utente sceglie di utilizzare la funzionalità di valutazione
-            tramite intelligenza artificiale.
-        </div>
-
-        <p>
-            Per effettuare la valutazione, l'applicazione può inviare a
-            TypeSafe AI:
-        </p>
-
-        <ul>
-            <li>la domanda;</li>
-            <li>la risposta fornita dall'utente;</li>
-            <li>la risposta precedentemente memorizzata, utilizzata come riferimento per la valutazione;</li>
-            <li>le istruzioni necessarie al sistema di intelligenza artificiale per effettuare la valutazione.</li>
-        </ul>
-
-        <p>
-            G Drako Interactive non utilizza un proprio sistema di
-            intelligenza artificiale per conservare o addestrare modelli
-            sui dati dell'utente.
-        </p>
-
-        <p>
-            Secondo la Privacy Policy di TypeSafe AI, gli input inviati
-            ai suoi servizi non vengono utilizzati per addestrare o
-            effettuare il fine-tuning dei modelli di intelligenza
-            artificiale.
-        </p>
-
-        <p>
-            TypeSafe AI può tuttavia conservare i dati per il periodo
-            ragionevolmente necessario alla fornitura dei propri servizi
-            o per le proprie finalità commerciali e legali.
-        </p>
-
-        <div class="warning-box">
-            <strong>Informazioni personali</strong><br>
-            Si consiglia di non inserire nelle domande o nelle risposte
-            informazioni personali, sensibili o riservate che non siano
-            necessarie per utilizzare la funzionalità.
-        </div>
-
-        <p>
-            I servizi di TypeSafe AI sono ospitati negli Stati Uniti.
-            Pertanto, quando l'utente utilizza la funzionalità di
-            valutazione tramite IA, i dati inviati possono essere
-            trasferiti negli Stati Uniti per essere elaborati.
-        </p>
-    </section>
-
-    <section id="ads">
-        <h2>5. Pubblicità e Google Mobile Ads</h2>
-
-        <p>
-            Memorizer può utilizzare Google Mobile Ads / AdMob per
-            mostrare annunci pubblicitari.
-        </p>
-
-        <p>
-            Il relativo SDK può trattare informazioni tecniche e relative
-            all'utilizzo del dispositivo e dell'applicazione necessarie
-            per fornire, misurare e proteggere il servizio pubblicitario.
-        </p>
-
-        <p>
-            A seconda delle impostazioni di consenso e delle modalità di
-            pubblicazione degli annunci, tali dati possono includere
-            identificatori pubblicitari, informazioni sul dispositivo,
-            indirizzo IP, dati relativi alle interazioni con gli annunci
-            e informazioni tecniche utilizzate per la pubblicazione e la
-            misurazione della pubblicità.
-        </p>
-
-        <div class="info-box">
-            <strong>Consenso alla pubblicità</strong><br>
-            Per gli utenti nello Spazio Economico Europeo, nel Regno Unito
-            e in Svizzera, Memorizer può mostrare un'interfaccia per la
-            gestione del consenso relativa alla pubblicità e al trattamento
-            dei dati, secondo i requisiti applicabili.
-        </div>
-
-        <p>
-            L'utente può modificare o revocare le proprie scelte di
-            consenso attraverso le opzioni per la privacy rese disponibili
-            dall'applicazione, ove applicabile.
-        </p>
-
-        <p>
-            Le modalità di trattamento dei dati da parte di Google sono
-            disciplinate dalle informative sulla privacy e dalle condizioni
-            applicabili ai servizi Google.
-        </p>
-    </section>
-
-    <section id="non-raccolti">
-        <h2>6. Dati non raccolti direttamente da Memorizer</h2>
-
-        <p>
-            Memorizer non richiede:
-        </p>
-
-        <ul>
-            <li>creazione di un account;</li>
-            <li>registrazione obbligatoria;</li>
-            <li>nome e cognome;</li>
-            <li>numero di telefono;</li>
-            <li>indirizzo di casa;</li>
-            <li>password;</li>
-            <li>accesso ai contatti della rubrica;</li>
-            <li>posizione GPS.</li>
-        </ul>
-
-        <p>
-            I contenuti personali creati dall'utente, come domande e
-            risposte, non vengono caricati su un server di proprietà di
-            G Drako Interactive.
-        </p>
-
-        <p>
-            Il trasferimento di dati a servizi di terze parti avviene
-            quando è necessario per una funzionalità utilizzata
-            dall'utente, come la valutazione tramite IA, o per il
-            funzionamento dei servizi pubblicitari.
-        </p>
-    </section>
-
-    <section id="finalita">
-        <h2>7. Finalità del trattamento</h2>
-
-        <p>
-            I dati possono essere trattati per le seguenti finalità:
-        </p>
-
-        <ul>
-            <li>fornire le funzionalità di Memorizer;</li>
-            <li>conservare localmente i contenuti creati dall'utente;</li>
-            <li>valutare le risposte tramite il servizio di intelligenza artificiale richiesto dall'utente;</li>
-            <li>fornire e visualizzare annunci pubblicitari;</li>
-            <li>misurare e migliorare il funzionamento dei servizi di terze parti;</li>
-            <li>garantire la sicurezza e prevenire abusi o attività illecite;</li>
-            <li>adempiere agli obblighi previsti dalla legge.</li>
-        </ul>
-    </section>
-
-    <section id="base-giuridica">
-        <h2>8. Base giuridica</h2>
-
-        <p>
-            A seconda della tipologia di trattamento, la base giuridica
-            può includere:
-        </p>
-
-        <ul>
-            <li>l'esecuzione della funzionalità richiesta dall'utente;</li>
-            <li>il consenso dell'utente, quando richiesto dalla normativa applicabile;</li>
-            <li>il perseguimento di legittimi interessi, ove consentito dalla normativa applicabile;</li>
-            <li>l'adempimento di obblighi legali.</li>
-        </ul>
-
-        <p>
-            Per la pubblicità e i relativi trattamenti soggetti a consenso,
-            il consenso viene richiesto secondo i meccanismi previsti dai
-            servizi di gestione del consenso utilizzati dall'applicazione.
-        </p>
-    </section>
-
-    <section id="conservazione">
-        <h2>9. Conservazione dei dati</h2>
-
-        <p>
-            I dati creati dall'utente e conservati localmente rimangono
-            sul dispositivo fino a quando l'utente non li elimina,
-            cancella i dati dell'applicazione o disinstalla l'applicazione,
-            salvo eventuali meccanismi di backup del dispositivo gestiti
-            dal sistema operativo o dall'utente.
-        </p>
-
-        <p>
-            I dati trasmessi a TypeSafe AI sono soggetti alle relative
-            politiche di conservazione di TypeSafe AI.
-        </p>
-
-        <p>
-            I dati trattati da Google per la pubblicità sono soggetti
-            alle politiche e ai periodi di conservazione applicabili
-            ai servizi Google.
-        </p>
-
-        <p>
-            G Drako Interactive non conserva autonomamente su propri
-            server le domande, le risposte o gli altri contenuti creati
-            dall'utente.
-        </p>
-    </section>
-
-    <section id="sicurezza">
-        <h2>10. Sicurezza</h2>
-
-        <p>
-            G Drako Interactive adotta misure ragionevoli per proteggere
-            i dati gestiti dall'applicazione.
-        </p>
-
-        <p>
-            I dati trasmessi ai servizi online utilizzati dall'applicazione
-            vengono trasmessi tramite connessioni di rete sicure quando
-            previsto dal relativo servizio.
-        </p>
-
-        <p>
-            Tuttavia, nessun sistema di archiviazione o trasmissione
-            elettronica può essere considerato completamente sicuro.
-        </p>
-    </section>
-
-    <section id="terze-parti">
-        <h2>11. Condivisione con terze parti</h2>
-
-        <p>
-            Alcuni dati possono essere trasmessi ai seguenti fornitori
-            di servizi:
-        </p>
-
-        <div class="service">
-            <strong>TypeSafe AI</strong>
-            Utilizzato per la funzionalità di valutazione delle risposte
-            tramite intelligenza artificiale.
-        </div>
-
-        <div class="service">
-            <strong>Google Mobile Ads / AdMob</strong>
-            Utilizzato per la visualizzazione e la gestione degli annunci
-            pubblicitari.
-        </div>
-
-        <p>
-            Questi fornitori operano secondo le proprie informative e
-            condizioni relative alla privacy.
-        </p>
-
-        <p>
-            G Drako Interactive non vende i contenuti personali creati
-            dagli utenti.
-        </p>
-    </section>
-
-    <section id="diritti">
-        <h2>12. Diritti degli utenti</h2>
-
-        <p>
-            Gli utenti possono avere, secondo la normativa applicabile,
-            diritti relativi ai propri dati personali, tra cui:
-        </p>
-
-        <ul>
-            <li>diritto di accesso;</li>
-            <li>diritto alla rettifica;</li>
-            <li>diritto alla cancellazione;</li>
-            <li>diritto alla limitazione del trattamento;</li>
-            <li>diritto di opposizione;</li>
-            <li>diritto alla portabilità dei dati, quando applicabile;</li>
-            <li>diritto di revocare il consenso quando il trattamento si basa sul consenso.</li>
-        </ul>
-
-        <p>
-            Per esercitare i propri diritti o richiedere informazioni
-            sul trattamento dei dati è possibile contattare:
-        </p>
-
-        <div class="contact">
-            <strong>G Drako Interactive</strong>
-            <a href="mailto:g.drako.interactive@gmail.com">
-                g.drako.interactive@gmail.com
-            </a>
-        </div>
-
-        <p>
-            Poiché la maggior parte dei dati creati dall'utente viene
-            conservata localmente sul dispositivo e non su server gestiti
-            da G Drako Interactive, l'eliminazione dei dati locali può
-            essere effettuata direttamente dall'utente tramite le
-            funzionalità dell'applicazione, oppure eliminando i dati
-            dell'applicazione o disinstallando Memorizer.
-        </p>
-    </section>
-
-    <section id="minori">
-        <h2>13. Minori</h2>
-
-        <p>
-            Memorizer non è progettata specificamente per bambini.
-        </p>
-
-        <p>
-            G Drako Interactive non intende raccogliere consapevolmente
-            dati personali di minori attraverso propri sistemi.
-        </p>
-
-        <p>
-            L'utilizzo dei servizi di terze parti integrati
-            nell'applicazione, inclusi i servizi di intelligenza
-            artificiale e pubblicitari, è soggetto anche alle relative
-            politiche e ai requisiti di età applicabili.
-        </p>
-    </section>
-
-    <section id="servizi">
-        <h2>14. Servizi e informative di terze parti</h2>
-
-        <p>
-            Per maggiori informazioni sul trattamento dei dati da parte
-            dei servizi utilizzati da Memorizer, è possibile consultare
-            le informative dei rispettivi fornitori:
-        </p>
-
-        <div class="service">
-            <strong>TypeSafe AI</strong>
-            <a href="https://typesafe.ai/legal/privacy-policy"
-               target="_blank"
-               rel="noopener noreferrer">
-                Privacy Policy di TypeSafe AI
-            </a>
-        </div>
-
-        <div class="service">
-            <strong>Google</strong>
-            <a href="https://policies.google.com/privacy"
-               target="_blank"
-               rel="noopener noreferrer">
-                Google Privacy Policy
-            </a>
-        </div>
-
-        <div class="service">
-            <strong>Google Mobile Ads</strong>
-            <a href="https://developers.google.com/admob"
-               target="_blank"
-               rel="noopener noreferrer">
-                Informazioni su Google AdMob
-            </a>
-        </div>
-    </section>
-
-    <section id="modifiche">
-        <h2>15. Modifiche alla Privacy Policy</h2>
-
-        <p>
-            G Drako Interactive può modificare questa Privacy Policy
-            quando necessario, ad esempio in caso di modifiche
-            all'applicazione, ai servizi utilizzati o alla normativa
-            applicabile.
-        </p>
-
-        <p>
-            La versione aggiornata della Privacy Policy verrà pubblicata
-            su questa pagina indicando la relativa data di aggiornamento.
-        </p>
-    </section>
-
-    <section id="contatti">
-        <h2>16. Contatti</h2>
-
-        <p>
-            Per domande, richieste o comunicazioni relative alla privacy
-            e al trattamento dei dati:
-        </p>
-
-        <div class="contact">
-            <strong>G Drako Interactive</strong>
-
-            <p>
-                Email:
-                <a href="mailto:g.drako.interactive@gmail.com">
-                    g.drako.interactive@gmail.com
-                </a>
-            </p>
-        </div>
-    </section>
-
-    <section id="app">
-        <h2>17. Informazioni sull'applicazione</h2>
-
-        <ul>
-            <li><strong>Nome:</strong> Memorizer</li>
-            <li><strong>Sviluppatore:</strong> G Drako Interactive</li>
-            <li><strong>Piattaforma:</strong> Android</li>
-        </ul>
-    </section>
-
-</article>
-</main> <footer> <p><strong>Memorizer</strong></p> <p>Pubblicata da G Drako Interactive</p> <p> <a href="mailto:g.drako.interactive@gmail.com"> g.drako.interactive@gmail.com </a> </p> <p>© 2026 G Drako Interactive. Tutti i diritti riservati.</p> </footer> </body> </html>
+        <nav class="toc" aria-label="Table of Contents">
+            <h2 id="toc-title">Table of Contents</h2>
+            <ol>
+                <li><a href="#titolare" id="toc-1">Owner and Developer</a></li>
+                <li><a href="#generali" id="toc-2">General Information</a></li>
+                <li><a href="#locale" id="toc-3">Data Stored Locally</a></li>
+                <li><a href="#ia" id="toc-4">AI Evaluation</a></li>
+                <li><a href="#ads" id="toc-5">Advertising and Google Mobile Ads</a></li>
+                <li><a href="#non-raccolti" id="toc-6">Data Not Collected Directly</a></li>
+                <li><a href="#finalita" id="toc-7">Purposes of Processing</a></li>
+                <li><a href="#base-giuridica" id="toc-8">Legal Basis</a></li>
+                <li><a href="#conservazione" id="toc-9">Data Retention</a></li>
+                <li><a href="#sicurezza" id="toc-10">Security</a></li>
+                <li><a href="#terze-parti" id="toc-11">Sharing with Third Parties</a></li>
+                <li><a href="#diritti" id="toc-12">User Rights</a></li>
+                <li><a href="#minori" id="toc-13">Minors</a></li>
+                <li><a href="#servizi" id="toc-14">Third-Party Services & Policies</a></li>
+                <li><a href="#modifiche" id="toc-15">Changes to Privacy Policy</a></li>
+                <li><a href="#contatti" id="toc-16">Contacts</a></li>
+                <li><a href="#app" id="toc-17">Application Information</a></li>
+            </ol>
+        </nav>
+
+        <section id="titolare">
+            <h2 id="sec1-title">1. Owner and Developer</h2>
+            <p id="sec1-p1">This Privacy Policy describes how the mobile application <strong>Memorizer</strong> manages user data.</p>
+            <div class="contact">
+                <strong id="sec1-dev-label">Developer</strong>
+                G Drako Interactive
+                <br><br>
+                <strong id="sec1-email-label">Contact Email</strong>
+                <a href="mailto:g.drako.interactive@gmail.com">g.drako.interactive@gmail.com</a>
+            </div>
+            <p id="sec1-p2">For any privacy or data processing questions, you can contact the developer at the email address provided above.</p>
+        </section>
+
+        <section id="generali">
+            <h2 id="sec2-title">2. General Information</h2>
+            <p id="sec2-p1">Memorizer is an application for Android devices designed to help users study and memorize using questions, answers, categories, ratings, and review features.</p>
+            <p id="sec2-p2">The application does not require creating an account, nor does it require registration, name, email address, or password to be used.</p>
+            <p id="sec2-p3">Data created directly by the user within the application is normally stored locally on the device.</p>
+            <p id="sec2-p4">However, some features use third-party services, in particular:</p>
+            <ul>
+                <li id="sec2-li1">TypeSafe AI for evaluating answers via artificial intelligence;</li>
+                <li id="sec2-li2">Google Mobile Ads / AdMob for advertising.</li>
+            </ul>
+            <p id="sec2-p5">Using these features may involve transferring and processing certain data outside the device.</p>
+        </section>
+
+        <section id="locale">
+            <h2 id="sec3-title">3. Data Stored Locally on the Device</h2>
+            <p id="sec3-p1">Information created and used by the user within Memorizer may include:</p>
+            <ul>
+                <li id="sec3-li1">questions;</li>
+                <li id="sec3-li2">answers;</li>
+                <li id="sec3-li3">categories;</li>
+                <li id="sec3-li4">ratings and scores;</li>
+                <li id="sec3-li5">images associated with questions;</li>
+                <li id="sec3-li6">application settings;</li>
+                <li id="sec3-li7">notification settings and review schedules;</li>
+                <li id="sec3-li8">other information necessary for the application to function.</li>
+            </ul>
+            <div class="info-box">
+                <strong id="sec3-box-title">Local Storage</strong><br>
+                <span id="sec3-box-text">This data is stored locally in the application's data area on the user's device.</span>
+            </div>
+            <p id="sec3-p2">G Drako Interactive does not maintain its own remote server or database to retain this personal user content.</p>
+            <p id="sec3-p3">Uninstalling the application or clearing application data through device settings may result in the deletion of locally stored data.</p>
+        </section>
+
+        <section id="ia">
+            <h2 id="sec4-title">4. Answer Evaluation via Artificial Intelligence</h2>
+            <p id="sec4-p1">Memorizer offers a feature that allows the use of an artificial intelligence service to evaluate an answer provided by the user.</p>
+            <div class="info-box">
+                <strong id="sec4-box-title">When is AI used?</strong><br>
+                <span id="sec4-box-text">Information is transmitted to the AI service when the user chooses to use the AI evaluation feature.</span>
+            </div>
+            <p id="sec4-p2">To perform the evaluation, the application may send to TypeSafe AI:</p>
+            <ul>
+                <li id="sec4-li1">the question;</li>
+                <li id="sec4-li2">the answer provided by the user;</li>
+                <li id="sec4-li3">the previously stored answer, used as a reference for evaluation;</li>
+                <li id="sec4-li4">instructions required for the artificial intelligence system to conduct the evaluation.</li>
+            </ul>
+            <p id="sec4-p3">G Drako Interactive does not use its own artificial intelligence system to store or train models on user data.</p>
+            <p id="sec4-p4">According to TypeSafe AI's Privacy Policy, inputs sent to its services are not used to train or fine-tune artificial intelligence models.</p>
+            <p id="sec4-p5">However, TypeSafe AI may retain data for the period reasonably necessary to provide its services or for its commercial and legal purposes.</p>
+            <div class="warning-box">
+                <strong id="sec4-warn-title">Personal Information</strong><br>
+                <span id="sec4-warn-text">We recommend not including personal, sensitive, or confidential information in questions or answers that is not necessary to use the feature.</span>
+            </div>
+            <p id="sec4-p6">TypeSafe AI services are hosted in the United States. Therefore, when the user uses the AI evaluation feature, submitted data may be transferred to the United States for processing.</p>
+        </section>
+
+        <section id="ads">
+            <h2 id="sec5-title">5. Advertising and Google Mobile Ads</h2>
+            <p id="sec5-p1">Memorizer may use Google Mobile Ads / AdMob to display advertisements.</p>
+            <p id="sec5-p2">The relevant SDK may process technical and usage information regarding the device and application necessary to deliver, measure, and protect the advertising service.</p>
+            <p id="sec5-p3">Depending on consent settings and ad serving methods, such data may include advertising identifiers, device information, IP address, ad interaction data, and technical information used for ad delivery and measurement.</p>
+            <div class="info-box">
+                <strong id="sec5-box-title">Advertising Consent</strong><br>
+                <span id="sec5-box-text">For users in the European Economic Area, the United Kingdom, and Switzerland, Memorizer may show a consent management interface for advertising and data processing according to applicable requirements.</span>
+            </div>
+            <p id="sec5-p4">The user can modify or revoke consent choices through privacy options made available within the application, where applicable.</p>
+            <p id="sec5-p5">Data processing methods by Google are governed by the privacy policies and terms applicable to Google services.</p>
+        </section>
+
+        <section id="non-raccolti">
+            <h2 id="sec6-title">6. Data Not Collected Directly by Memorizer</h2>
+            <p id="sec6-p1">Memorizer does not require:</p>
+            <ul>
+                <li id="sec6-li1">account creation;</li>
+                <li id="sec6-li2">mandatory registration;</li>
+                <li id="sec6-li3">first and last name;</li>
+                <li id="sec6-li4">phone number;</li>
+                <li id="sec6-li5">home address;</li>
+                <li id="sec6-li6">password;</li>
+                <li id="sec6-li7">access to address book contacts;</li>
+                <li id="sec6-li8">GPS location.</li>
+            </ul>
+            <p id="sec6-p2">Personal content created by the user, such as questions and answers, is not uploaded to a server owned by G Drako Interactive.</p>
+            <p id="sec6-p3">Data transfer to third-party services occurs when necessary for a feature used by the user, such as AI evaluation, or for advertising services operation.</p>
+        </section>
+
+        <section id="finalita">
+            <h2 id="sec7-title">7. Purposes of Processing</h2>
+            <p id="sec7-p1">Data may be processed for the following purposes:</p>
+            <ul>
+                <li id="sec7-li1">providing Memorizer features;</li>
+                <li id="sec7-li2">storing user-created content locally;</li>
+                <li id="sec7-li3">evaluating answers via the AI service requested by the user;</li>
+                <li id="sec7-li4">providing and displaying advertisements;</li>
+                <li id="sec7-li5">measuring and improving the operation of third-party services;</li>
+                <li id="sec7-li6">ensuring security and preventing abuse or illegal activities;</li>
+                <li id="sec7-li7">complying with legal obligations.</li>
+            </ul>
+        </section>
+
+        <section id="base-giuridica">
+            <h2 id="sec8-title">8. Legal Basis</h2>
+            <p id="sec8-p1">Depending on the type of processing, the legal basis may include:</p>
+            <ul>
+                <li id="sec8-li1">execution of the feature requested by the user;</li>
+                <li id="sec8-li2">user consent, when required by applicable law;</li>
+                <li id="sec8-li3">pursuit of legitimate interests, where permitted by applicable law;</li>
+                <li id="sec8-li4">compliance with legal obligations.</li>
+            </ul>
+            <p id="sec8-p2">For advertising and consent-subjected processing, consent is requested through mechanisms provided by consent management services used in the application.</p>
+        </section>
+
+        <section id="conservazione">
+            <h2 id="sec9-title">9. Data Retention</h2>
+            <p id="sec9-p1">Data created by the user and stored locally remains on the device until the user deletes it, clears application data, or uninstalls the application, subject to device backup mechanisms managed by the OS or user.</p>
+            <p id="sec9-p2">Data transmitted to TypeSafe AI is subject to TypeSafe AI's retention policies.</p>
+            <p id="sec9-p3">Data processed by Google for advertising is subject to Google services' retention policies and periods.</p>
+            <p id="sec9-p4">G Drako Interactive does not independently store user questions, answers, or other created content on its own servers.</p>
+        </section>
+
+        <section id="sicurezza">
+            <h2 id="sec10-title">10. Security</h2>
+            <p id="sec10-p1">G Drako Interactive takes reasonable measures to protect data handled by the application.</p>
+            <p id="sec10-p2">Data transmitted to online services used by the application is transmitted via secure network connections when supported by the respective service.</p>
+            <p id="sec10-p3">However, no electronic storage or transmission system can be considered completely secure.</p>
+        </section>
+
+        <section id="terze-parti">
+            <h2 id="sec11-title">11. Sharing with Third Parties</h2>
+            <p id="sec11-p1">Certain data may be transmitted to the following service providers:</p>
+            <div class="service">
+                <strong>TypeSafe AI</strong>
+                <span id="sec11-s1">Used for answer evaluation via artificial intelligence.</span>
+            </div>
+            <div class="service">
+                <strong>Google Mobile Ads / AdMob</strong>
+                <span id="sec11-s2">Used for displaying and managing advertisements.</span>
+            </div>
+            <p id="sec11-p2">These providers operate according to their own privacy policies and terms.</p>
+            <p id="sec11-p3">G Drako Interactive does not sell personal content created by users.</p>
+        </section>
+
+        <section id="diritti">
+            <h2 id="sec12-title">12. User Rights</h2>
+            <p id="sec12-p1">Under applicable regulations, users may have rights regarding their personal data, including:</p>
+            <ul>
+                <li id="sec12-li1">right of access;</li>
+                <li id="sec12-li2">right to rectification;</li>
+                <li id="sec12-li3">right to erasure;</li>
+                <li id="sec12-li4">right to restriction of processing;</li>
+                <li id="sec12-li5">right to object;</li>
+                <li id="sec12-li6">right to data portability, where applicable;</li>
+                <li id="sec12-li7">right to withdraw consent when processing is based on consent.</li>
+            </ul>
+            <p id="sec12-p2">To exercise rights or request information regarding data processing, you may contact:</p>
+            <div class="contact">
+                <strong>G Drako Interactive</strong>
+                <a href="mailto:g.drako.interactive@gmail.com">g.drako.interactive@gmail.com</a>
+            </div>
+            <p id="sec12-p3">Since most user-created data is stored locally on the device rather than servers managed by G Drako Interactive, local data deletion can be carried out directly by the user via app features, clearing app data, or uninstalling Memorizer.</p>
+        </section>
+
+        <section id="minori">
+            <h2 id="sec13-title">13. Minors</h2>
+            <p id="sec13-p1">Memorizer is not specifically designed for children.</p>
+            <p id="sec13-p2">G Drako Interactive does not knowingly collect personal data from minors through its systems.</p>
+            <p id="sec13-p3">The use of integrated third-party services, including AI and advertising services, is also subject to their respective age requirements and policies.</p>
+        </section>
+
+        <section id="servizi">
+            <h2 id="sec14-title">14. Third-Party Services & Policies</h2>
+            <p id="sec14-p1">For more information on data processing by services used by Memorizer, you can consult their privacy policies:</p>
+            <div class="service">
+                <strong>TypeSafe AI</strong>
+                <a href="https://typesafe.ai/legal/privacy-policy" target="_blank" rel="noopener noreferrer" id="sec14-l1">TypeSafe AI Privacy Policy</a>
+            </div>
+            <div class="service">
+                <strong>Google</strong>
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" id="sec14-l2">Google Privacy Policy</a>
+            </div>
+            <div class="service">
+                <strong>Google Mobile Ads</strong>
+                <a href="https://developers.google.com/admob" target="_blank" rel="noopener noreferrer" id="sec14-l3">About Google AdMob</a>
+            </div>
+        </section>
+
+        <section id="modifiche">
+            <h2 id="sec15-title">15. Changes to Privacy Policy</h2>
+            <p id="sec15-p1">G Drako Interactive may modify this Privacy Policy when necessary, such as upon updates to the app, services used, or applicable laws.</p>
+            <p id="sec15-p2">The updated version will be published on this page indicating the date of the update.</p>
+        </section>
+
+        <section id="contatti">
+            <h2 id="sec16-title">16. Contacts</h2>
+            <p id="sec16-p1">For questions, requests, or communications regarding privacy and data processing:</p>
+            <div class="contact">
+                <strong>G Drako Interactive</strong>
+                <p>Email: <a href="mailto:g.drako.interactive@gmail.com">g.drako.interactive@gmail.com</a></p>
+            </div>
+        </section>
+
+        <section id="app">
+            <h2 id="sec17-title">17. Application Information</h2>
+            <ul>
+                <li><strong id="sec17-l1">Name:</strong> Memorizer</li>
+                <li><strong id="sec17-l2">Developer:</strong> G Drako Interactive</li>
+                <li><strong id="sec17-l3">Platform:</strong> Android</li>
+            </ul>
+        </section>
+
+    </article>
+</main>
+
+<footer>
+    <p><strong>Memorizer</strong></p>
+    <p id="footer-pub">Published by G Drako Interactive</p>
+    <p><a href="mailto:g.drako.interactive@gmail.com">g.drako.interactive@gmail.com</a></p>
+    <p id="footer-rights">© 2026 G Drako Interactive. All rights reserved.</p>
+</footer>
+
+<script>
+const translations = {
+    en: {
+        docTitle: "Privacy Policy — Memorizer",
+        docDesc: "Privacy Policy of Memorizer, an Android application published by G Drako Interactive.",
+        titleMain: "Privacy Policy",
+        lastUpdated: "Last updated: October 5, 2026",
+        tocTitle: "Table of Contents",
+        toc1: "Owner and Developer",
+        toc2: "General Information",
+        toc3: "Data Stored Locally",
+        toc4: "AI Evaluation",
+        toc5: "Advertising and Google Mobile Ads",
+        toc6: "Data Not Collected Directly",
+        toc7: "Purposes of Processing",
+        toc8: "Legal Basis",
+        toc9: "Data Retention",
+        toc10: "Security",
+        toc11: "Sharing with Third Parties",
+        toc12: "User Rights",
+        toc13: "Minors",
+        toc14: "Third-Party Services & Policies",
+        toc15: "Changes to Privacy Policy",
+        toc16: "Contacts",
+        toc17: "Application Information",
+        sec1Title: "1. Owner and Developer",
+        sec1P1: "This Privacy Policy describes how the mobile application <strong>Memorizer</strong> manages user data.",
+        sec1DevLabel: "Developer",
+        sec1EmailLabel: "Contact Email",
+        sec1P2: "For any privacy or data processing questions, you can contact the developer at the email address provided above.",
+        sec2Title: "2. General Information",
+        sec2P1: "Memorizer is an application for Android devices designed to help users study and memorize using questions, answers, categories, ratings, and review features.",
+        sec2P2: "The application does not require creating an account, nor does it require registration, name, email address, or password to be used.",
+        sec2P3: "Data created directly by the user within the application is normally stored locally on the device.",
+        sec2P4: "However, some features use third-party services, in particular:",
+        sec2Li1: "TypeSafe AI for evaluating answers via artificial intelligence;",
+        sec2Li2: "Google Mobile Ads / AdMob for advertising.",
+        sec2P5: "Using these features may involve transferring and processing certain data outside the device.",
+        sec3Title: "3. Data Stored Locally on the Device",
+        sec3P1: "Information created and used by the user within Memorizer may include:",
+        sec3Li1: "questions;",
+        sec3Li2: "answers;",
+        sec3Li3: "categories;",
+        sec3Li4: "ratings and scores;",
+        sec3Li5: "images associated with questions;",
+        sec3Li6: "application settings;",
+        sec3Li7: "notification settings and review schedules;",
+        sec3Li8: "other information necessary for the application to function.",
+        sec3BoxTitle: "Local Storage",
+        sec3BoxText: "This data is stored locally in the application's data area on the user's device.",
+        sec3P2: "G Drako Interactive does not maintain its own remote server or database to retain this personal user content.",
+        sec3P3: "Uninstalling the application or clearing application data through device settings may result in the deletion of locally stored data.",
+        sec4Title: "4. Answer Evaluation via Artificial Intelligence",
+        sec4P1: "Memorizer offers a feature that allows the use of an artificial intelligence service to evaluate an answer provided by the user.",
+        sec4BoxTitle: "When is AI used?",
+        sec4BoxText: "Information is transmitted to the AI service when the user chooses to use the AI evaluation feature.",
+        sec4P2: "To perform the evaluation, the application may send to TypeSafe AI:",
+        sec4Li1: "the question;",
+        sec4Li2: "the answer provided by the user;",
+        sec4Li3: "the previously stored answer, used as a reference for evaluation;",
+        sec4Li4: "instructions required for the artificial intelligence system to conduct the evaluation.",
+        sec4P3: "G Drako Interactive does not use its own artificial intelligence system to store or train models on user data.",
+        sec4P4: "According to TypeSafe AI's Privacy Policy, inputs sent to its services are not used to train or fine-tune artificial intelligence models.",
+        sec4P5: "However, TypeSafe AI may retain data for the period reasonably necessary to provide its services or for its commercial and legal purposes.",
+        sec4WarnTitle: "Personal Information",
+        sec4WarnText: "We recommend not including personal, sensitive, or confidential information in questions or answers that is not necessary to use the feature.",
+        sec4P6: "TypeSafe AI services are hosted in the United States. Therefore, when the user uses the AI evaluation feature, submitted data may be transferred to the United States for processing.",
+        sec5Title: "5. Advertising and Google Mobile Ads",
+        sec5P1: "Memorizer may use Google Mobile Ads / AdMob to display advertisements.",
+        sec5P2: "The relevant SDK may process technical and usage information regarding the device and application necessary to deliver, measure, and protect the advertising service.",
+        sec5P3: "Depending on consent settings and ad serving methods, such data may include advertising identifiers, device information, IP address, ad interaction data, and technical information used for ad delivery and measurement.",
+        sec5BoxTitle: "Advertising Consent",
+        sec5BoxText: "For users in the European Economic Area, the United Kingdom, and Switzerland, Memorizer may show a consent management interface for advertising and data processing according to applicable requirements.",
+        sec5P4: "The user can modify or revoke consent choices through privacy options made available within the application, where applicable.",
+        sec5P5: "Data processing methods by Google are governed by the privacy policies and terms applicable to Google services.",
+        sec6Title: "6. Data Not Collected Directly by Memorizer",
+        sec6P1: "Memorizer does not require:",
+        sec6Li1: "account creation;",
+        sec6Li2: "mandatory registration;",
+        sec6Li3: "first and last name;",
+        sec6Li4: "phone number;",
+        sec6Li5: "home address;",
+        sec6Li6: "password;",
+        sec6Li7: "access to address book contacts;",
+        sec6Li8: "GPS location.",
+        sec6P2: "Personal content created by the user, such as questions and answers, is not uploaded to a server owned by G Drako Interactive.",
+        sec6P3: "Data transfer to third-party services occurs when necessary for a feature used by the user, such as AI evaluation, or for advertising services operation.",
+        sec7Title: "7. Purposes of Processing",
+        sec7P1: "Data may be processed for the following purposes:",
+        sec7Li1: "providing Memorizer features;",
+        sec7Li2: "storing user-created content locally;",
+        sec7Li3: "evaluating answers via the AI service requested by the user;",
+        sec7Li4: "providing and displaying advertisements;",
+        sec7Li5: "measuring and improving the operation of third-party services;",
+        sec7Li6: "ensuring security and preventing abuse or illegal activities;",
+        sec7Li7: "complying with legal obligations.",
+        sec8Title: "8. Legal Basis",
+        sec8P1: "Depending on the type of processing, the legal basis may include:",
+        sec8Li1: "execution of the feature requested by the user;",
+        sec8Li2: "user consent, when required by applicable law;",
+        sec8Li3: "pursuit of legitimate interests, where permitted by applicable law;",
+        sec8Li4: "compliance with legal obligations.",
+        sec8P2: "For advertising and consent-subjected processing, consent is requested through mechanisms provided by consent management services used in the application.",
+        sec9Title: "9. Data Retention",
+        sec9P1: "Data created by the user and stored locally remains on the device until the user deletes it, clears application data, or uninstalls the application, subject to device backup mechanisms managed by the OS or user.",
+        sec9P2: "Data transmitted to TypeSafe AI is subject to TypeSafe AI's retention policies.",
+        sec9P3: "Data processed by Google for advertising is subject to Google services' retention policies and periods.",
+        sec9P4: "G Drako Interactive does not independently store user questions, answers, or other created content on its own servers.",
+        sec10Title: "10. Security",
+        sec10P1: "G Drako Interactive takes reasonable measures to protect data handled by the application.",
+        sec10P2: "Data transmitted to online services used by the application is transmitted via secure network connections when supported by the respective service.",
+        sec10P3: "However, no electronic storage or transmission system can be considered completely secure.",
+        sec11Title: "11. Sharing with Third Parties",
+        sec11P1: "Certain data may be transmitted to the following service providers:",
+        sec11S1: "Used for answer evaluation via artificial intelligence.",
+        sec11S2: "Used for displaying and managing advertisements.",
+        sec11P2: "These providers operate according to their own privacy policies and terms.",
+        sec11P3: "G Drako Interactive does not sell personal content created by users.",
+        sec12Title: "12. User Rights",
+        sec12P1: "Under applicable regulations, users may have rights regarding their personal data, including:",
+        sec12Li1: "right of access;",
+        sec12Li2: "right to rectification;",
+        sec12Li3: "right to erasure;",
+        sec12Li4: "right to restriction of processing;",
+        sec12Li5: "right to object;",
+        sec12Li6: "right to data portability, where applicable;",
+        sec12Li7: "right to withdraw consent when processing is based on consent.",
+        sec12P2: "To exercise rights or request information regarding data processing, you may contact:",
+        sec12P3: "Since most user-created data is stored locally on the device rather than servers managed by G Drako Interactive, local data deletion can be carried out directly by the user via app features, clearing app data, or uninstalling Memorizer.",
+        sec13Title: "13. Minors",
+        sec13P1: "Memorizer is not specifically designed for children.",
+        sec13P2: "G Drako Interactive does not knowingly collect personal data from minors through its systems.",
+        sec13P3: "The use of integrated third-party services, including AI and advertising services, is also subject to their respective age requirements and policies.",
+        sec14Title: "14. Third-Party Services & Policies",
+        sec14P1: "For more information on data processing by services used by Memorizer, you can consult their privacy policies:",
+        sec14L1: "TypeSafe AI Privacy Policy",
+        sec14L2: "Google Privacy Policy",
+        sec14L3: "About Google AdMob",
+        sec15Title: "15. Changes to Privacy Policy",
+        sec15P1: "G Drako Interactive may modify this Privacy Policy when necessary, such as upon updates to the app, services used, or applicable laws.",
+        sec15P2: "The updated version will be published on this page indicating the date of the update.",
+        sec16Title: "16. Contacts",
+        sec16P1: "For questions, requests, or communications regarding privacy and data processing:",
+        sec17Title: "17. Application Information",
+        sec17L1: "Name:",
+        sec17L2: "Developer:",
+        sec17L3: "Platform:",
+        footerPub: "Published by G Drako Interactive",
+        footerRights: "© 2026 G Drako Interactive. All rights reserved."
+    },
+    it: {
+        docTitle: "Privacy Policy — Memorizer",
+        docDesc: "Privacy Policy di Memorizer, applicazione Android pubblicata da G Drako Interactive.",
+        titleMain: "Privacy Policy",
+        lastUpdated: "Ultimo aggiornamento: 5 ottobre 2026",
+        tocTitle: "Indice",
+        toc1: "Titolare e sviluppatore",
+        toc2: "Informazioni generali",
+        toc3: "Dati memorizzati localmente",
+        toc4: "Valutazione tramite intelligenza artificiale",
+        toc5: "Pubblicità e Google Mobile Ads",
+        toc6: "Dati non raccolti direttamente",
+        toc7: "Finalità del trattamento",
+        toc8: "Base giuridica",
+        toc9: "Conservazione dei dati",
+        toc10: "Sicurezza",
+        toc11: "Condivisione con terze parti",
+        toc12: "Diritti degli utenti",
+        toc13: "Minori",
+        toc14: "Servizi e informative di terze parti",
+        toc15: "Modifiche alla Privacy Policy",
+        toc16: "Contatti",
+        toc17: "Informazioni sull'applicazione",
+        sec1Title: "1. Titolare e sviluppatore",
+        sec1P1: "La presente Privacy Policy descrive le modalità con cui l'applicazione mobile <strong>Memorizer</strong> gestisce i dati degli utenti.",
+        sec1DevLabel: "Sviluppatore",
+        sec1EmailLabel: "Email di contatto",
+        sec1P2: "Per qualsiasi domanda relativa alla privacy o al trattamento dei dati è possibile contattare lo sviluppatore utilizzando l'indirizzo email sopra indicato.",
+        sec2Title: "2. Informazioni generali",
+        sec2P1: "Memorizer è un'applicazione per dispositivi Android progettata per aiutare l'utente nello studio e nella memorizzazione tramite domande, risposte, categorie, valutazioni e funzionalità di ripasso.",
+        sec2P2: "L'applicazione non richiede la creazione di un account e non richiede registrazione, nome, indirizzo email o password per essere utilizzata.",
+        sec2P3: "I dati creati direttamente dall'utente all'interno dell'applicazione vengono normalmente conservati localmente sul dispositivo.",
+        sec2P4: "Alcune funzionalità utilizzano tuttavia servizi di terze parti, in particolare:",
+        sec2Li1: "TypeSafe AI per la valutazione delle risposte tramite intelligenza artificiale;",
+        sec2Li2: "Google Mobile Ads / AdMob per la pubblicità.",
+        sec2P5: "L'utilizzo di queste funzionalità può comportare il trasferimento e il trattamento di determinati dati al di fuori del dispositivo.",
+        sec3Title: "3. Dati memorizzati localmente sul dispositivo",
+        sec3P1: "Le informazioni create e utilizzate dall'utente all'interno di Memorizer possono includere:",
+        sec3Li1: "domande;",
+        sec3Li2: "risposte;",
+        sec3Li3: "categorie;",
+        sec3Li4: "valutazioni e voti;",
+        sec3Li5: "immagini associate alle domande;",
+        sec3Li6: "impostazioni dell'applicazione;",
+        sec3Li7: "impostazioni relative alle notifiche e agli orari di ripasso;",
+        sec3Li8: "altre informazioni necessarie al funzionamento dell'applicazione.",
+        sec3BoxTitle: "Archiviazione locale",
+        sec3BoxText: "Questi dati vengono conservati localmente nell'area dati dell'applicazione sul dispositivo dell'utente.",
+        sec3P2: "G Drako Interactive non gestisce un proprio server o database remoto per la conservazione di questi contenuti personali dell'utente.",
+        sec3P3: "La disinstallazione dell'applicazione o la cancellazione dei dati dell'applicazione tramite le impostazioni del dispositivo può comportare la cancellazione dei dati memorizzati localmente.",
+        sec4Title: "4. Valutazione delle risposte tramite intelligenza artificiale",
+        sec4P1: "Memorizer offre una funzionalità che permette di utilizzare un servizio di intelligenza artificiale per valutare una risposta fornita dall'utente.",
+        sec4BoxTitle: "Quando viene utilizzata l'IA?",
+        sec4BoxText: "Le informazioni vengono trasmesse al servizio IA quando l'utente sceglie di utilizzare la funzionalità di valutazione tramite intelligenza artificiale.",
+        sec4P2: "Per effettuare la valutazione, l'applicazione può inviare a TypeSafe AI:",
+        sec4Li1: "la domanda;",
+        sec4Li2: "la risposta fornita dall'utente;",
+        sec4Li3: "la risposta precedentemente memorizzata, utilizzata come riferimento per la valutazione;",
+        sec4Li4: "le istruzioni necessarie al sistema di intelligenza artificiale per effettuare la valutazione.",
+        sec4P3: "G Drako Interactive non utilizza un proprio sistema di intelligenza artificiale per conservare o addestrare modelli sui dati dell'utente.",
+        sec4P4: "Secondo la Privacy Policy di TypeSafe AI, gli input inviati ai suoi servizi non vengono utilizzati per addestrare o effettuare il fine-tuning dei modelli di intelligenza artificiale.",
+        sec4P5: "TypeSafe AI può tuttavia conservare i dati per il periodo ragionevolmente necessario alla fornitura dei propri servizi o per le proprie finalità commerciali e legali.",
+        sec4WarnTitle: "Informazioni personali",
+        sec4WarnText: "Si consiglia di non inserire nelle domande o nelle risposte informazioni personali, sensibili o riservate che non siano necessarie per utilizzare la funzionalità.",
+        sec4P6: "I servizi di TypeSafe AI sono ospitati negli Stati Uniti. Pertanto, quando l'utente utilizza la funzionalità di valutazione tramite IA, i dati inviati possono essere trasferiti negli Stati Uniti per essere elaborati.",
+        sec5Title: "5. Pubblicità e Google Mobile Ads",
+        sec5P1: "Memorizer può utilizzare Google Mobile Ads / AdMob per mostrare annunci pubblicitari.",
+        sec5P2: "Il relativo SDK può trattare informazioni tecniche e relative all'utilizzo del dispositivo e dell'applicazione necessarie per fornire, misurare e proteggere il servizio pubblicitario.",
+        sec5P3: "A seconda delle impostazioni di consenso e delle modalità di pubblicazione degli annunci, tali dati possono includere identificatori pubblicitari, informazioni sul dispositivo, indirizzo IP, dati relativi alle interazioni con gli annunci e informazioni tecniche utilizzate per la pubblicazione e la misurazione della pubblicità.",
+        sec5BoxTitle: "Consenso alla pubblicità",
+        sec5BoxText: "Per gli utenti nello Spazio Economico Europeo, nel Regno Unito e in Svizzera, Memorizer può mostrare un'interfaccia per la gestione del consenso relativa alla pubblicità e al trattamento dei dati, secondo i requisiti applicabili.",
+        sec5P4: "L'utente può modificare o revocare le proprie scelte di consenso attraverso le opzioni per la privacy rese disponibili dall'applicazione, ove applicabile.",
+        sec5P5: "Le modalità di trattamento dei dati da parte di Google sono disciplinate dalle informative sulla privacy e dalle condizioni applicabili ai servizi Google.",
+        sec6Title: "6. Dati non raccolti direttamente da Memorizer",
+        sec6P1: "Memorizer non richiede:",
+        sec6Li1: "creazione di un account;",
+        sec6Li2: "registrazione obbligatoria;",
+        sec6Li3: "nome e cognome;",
+        sec6Li4: "numero di telefono;",
+        sec6Li5: "indirizzo di casa;",
+        sec6Li6: "password;",
+        sec6Li7: "accesso ai contatti della rubrica;",
+        sec6Li8: "posizione GPS.",
+        sec6P2: "I contenuti personali creati dall'utente, come domande e risposte, non vengono caricati su un server di proprietà di G Drako Interactive.",
+        sec6P3: "Il trasferimento di dati a servizi di terze parti avviene quando è necessario per una funzionalità utilizzata dall'utente, come la valutazione tramite IA, o per il funzionamento dei servizi pubblicitari.",
+        sec7Title: "7. Finalità del trattamento",
+        sec7P1: "I dati possono essere trattati per le seguenti finalità:",
+        sec7Li1: "fornire le funzionalità di Memorizer;",
+        sec7Li2: "conservare localmente i contenuti creati dall'utente;",
+        sec7Li3: "valutare le risposte tramite il servizio di intelligenza artificiale richiesto dall'utente;",
+        sec7Li4: "fornire e visualizzare annunci pubblicitari;",
+        sec7Li5: "misurare e migliorare il funzionamento dei servizi di terze parti;",
+        sec7Li6: "garantire la sicurezza e prevenire abusi o attività illecite;",
+        sec7Li7: "adempiere agli obblighi previsti dalla legge.",
+        sec8Title: "8. Base giuridica",
+        sec8P1: "A seconda della tipologia di trattamento, la base giuridica può includere:",
+        sec8Li1: "l'esecuzione della funzionalità richiesta dall'utente;",
+        sec8Li2: "il consenso dell'utente, quando richiesto dalla normativa applicabile;",
+        sec8Li3: "il perseguimento di legittimi interessi, ove consentito dalla normativa applicabile;",
+        sec8Li4: "l'adempimento di obblighi legali.",
+        sec8P2: "Per la pubblicità e i relativi trattamenti soggetti a consenso, il consenso viene richiesto secondo i meccanismi previsti dai servizi di gestione del consenso utilizzati dall'applicazione.",
+        sec9Title: "9. Conservazione dei dati",
+        sec9P1: "I dati creati dall'utente e conservati localmente rimangono sul dispositivo fino a quando l'utente non li elimina, cancella i dati dell'applicazione o disinstalla l'applicazione, salvo eventuali meccanismi di backup del dispositivo gestiti dal sistema operativo o dall'utente.",
+        sec9P2: "I dati trasmessi a TypeSafe AI sono soggetti alle relative politiche di conservazione di TypeSafe AI.",
+        sec9P3: "I dati trattati da Google per la pubblicità sono soggetti alle politiche e ai periodi di conservazione applicabili ai servizi Google.",
+        sec9P4: "G Drako Interactive non conserva autonomamente su propri server le domande, le risposte o gli altri contenuti creati dall'utente.",
+        sec10Title: "10. Sicurezza",
+        sec10P1: "G Drako Interactive adotta misure ragionevoli per proteggere i dati gestiti dall'applicazione.",
+        sec10P2: "I dati trasmessi ai servizi online utilizzati dall'applicazione vengono trasmessi tramite connessioni di rete sicure quando previsto dal relativo servizio.",
+        sec10P3: "Tuttavia, nessun sistema di archiviazione o trasmissione elettronica può essere considerato completamente sicuro.",
+        sec11Title: "11. Condivisione con terze parti",
+        sec11P1: "Alcuni dati possono essere trasmessi ai seguenti fornitori di servizi:",
+        sec11S1: "Utilizzato per la funzionalità di valutazione delle risposte tramite intelligenza artificiale.",
+        sec11S2: "Utilizzato per la visualizzazione e la gestione degli annunci pubblicitari.",
+        sec11P2: "Questi fornitori operano secondo le proprie informative e condizioni relative alla privacy.",
+        sec11P3: "G Drako Interactive non vende i contenuti personali creati dagli utenti.",
+        sec12Title: "12. Diritti degli utenti",
+        sec12P1: "Gli utenti possono avere, secondo la normativa applicabile, diritti relativi ai propri dati personali, tra cui:",
+        sec12Li1: "diritto di accesso;",
+        sec12Li2: "diritto alla rettifica;",
+        sec12Li3: "diritto alla cancellazione;",
+        sec12Li4: "diritto alla limitazione del trattamento;",
+        sec12Li5: "diritto di opposizione;",
+        sec12Li6: "diritto alla portabilità dei dati, quando applicabile;",
+        sec12Li7: "diritto di revocare il consenso quando il trattamento si basa sul consenso.",
+        sec12P2: "Per esercitare i propri diritti o richiedere informazioni sul trattamento dei dati è possibile contattare:",
+        sec12P3: "Poiché la maggior parte dei dati creati dall'utente viene conservata localmente sul dispositivo e non su server gestiti da G Drako Interactive, l'eliminazione dei dati locali può essere effettuata direttamente dall'utente tramite le funzionalità dell'applicazione, oppure eliminando i dati dell'applicazione o disinstallando Memorizer.",
+        sec13Title: "13. Minori",
+        sec13P1: "Memorizer non è progettata specificamente per bambini.",
+        sec13P2: "G Drako Interactive non intende raccogliere consapevolmente dati personali di minori attraverso propri sistemi.",
+        sec13P3: "L'utilizzo dei servizi di terze parti integrati nell'applicazione, inclusi i servizi di intelligenza artificiale e pubblicitari, è soggetto anche alle relative politiche e ai requisiti di età applicabili.",
+        sec14Title: "14. Servizi e informative di terze parti",
+        sec14P1: "Per maggiori informazioni sul trattamento dei dati da parte dei servizi utilizzati da Memorizer, è possibile consultare le informative dei rispettivi fornitori:",
+        sec14L1: "Privacy Policy di TypeSafe AI",
+        sec14L2: "Google Privacy Policy",
+        sec14L3: "Informazioni su Google AdMob",
+        sec15Title: "15. Modifiche alla Privacy Policy",
+        sec15P1: "G Drako Interactive può modificare questa Privacy Policy quando necessario, ad esempio in caso di modifiche all'applicazione, ai servizi utilizzati o alla normativa applicabile.",
+        sec15P2: "La versione aggiornata della Privacy Policy verrà pubblicata su questa pagina indicando la relativa data di aggiornamento.",
+        sec16Title: "16. Contatti",
+        sec16P1: "Per domande, richieste o comunicazioni relative alla privacy e al trattamento dei dati:",
+        sec17Title: "17. Informazioni sull'applicazione",
+        sec17L1: "Nome:",
+        sec17L2: "Sviluppatore:",
+        sec17L3: "Piattaforma:",
+        footerPub: "Pubblicata da G Drako Interactive",
+        footerRights: "© 2026 G Drako Interactive. Tutti i diritti riservati."
+    },
+    fr: {
+        docTitle: "Politique de Confidentialité — Memorizer",
+        docDesc: "Politique de confidentialité de Memorizer, application Android publiée par G Drako Interactive.",
+        titleMain: "Politique de Confidentialité",
+        lastUpdated: "Dernière mise à jour : 5 octobre 2026",
+        tocTitle: "Table des matières",
+        toc1: "Propriétaire et développeur",
+        toc2: "Informations générales",
+        toc3: "Données stockées localement",
+        toc4: "Évaluation par intelligence artificielle",
+        toc5: "Publicité et Google Mobile Ads",
+        toc6: "Données non collectées directement",
+        toc7: "Finalités du traitement",
+        toc8: "Base juridique",
+        toc9: "Conservation des données",
+        toc10: "Sécurité",
+        toc11: "Partage avec des tiers",
+        toc12: "Droits des utilisateurs",
+        toc13: "Mineurs",
+        toc14: "Services et politiques de tiers",
+        toc15: "Modifications de la politique de confidentialité",
+        toc16: "Contacts",
+        toc17: "Informations sur l'application",
+        sec1Title: "1. Propriétaire et développeur",
+        sec1P1: "Cette politique de confidentialité décrit comment l'application mobile <strong>Memorizer</strong> gère les données des utilisateurs.",
+        sec1DevLabel: "Développeur",
+        sec1EmailLabel: "E-mail de contact",
+        sec1P2: "Pour toute question concernant la confidentialité ou le traitement des données, vous pouvez contacter le développeur à l'adresse e-mail ci-dessus.",
+        sec2Title: "2. Informations générales",
+        sec2P1: "Memorizer est une application pour appareils Android conçue pour aider l'utilisateur à étudier et à mémoriser grâce à des questions, des réponses, des catégories, des évaluations et des fonctionnalités de révision.",
+        sec2P2: "L'application ne nécessite pas la création d'un compte, ni inscription, nom, adresse e-mail ou mot de passe pour être utilisée.",
+        sec2P3: "Les données créées directement par l'utilisateur au sein de l'application sont normalement stockées localement sur l'appareil.",
+        sec2P4: "Cependant, certaines fonctionnalités utilisent des services tiers, notamment :",
+        sec2Li1: "TypeSafe AI pour l'évaluation des réponses via l'intelligence artificielle ;",
+        sec2Li2: "Google Mobile Ads / AdMob pour la publicité.",
+        sec2P5: "L'utilisation de ces fonctionnalités peut entraîner le transfert et le traitement de certaines données en dehors de l'appareil.",
+        sec3Title: "3. Données stockées localement sur l'appareil",
+        sec3P1: "Les informations créées et utilisées par l'utilisateur dans Memorizer peuvent inclure :",
+        sec3Li1: "questions ;",
+        sec3Li2: "réponses ;",
+        sec3Li3: "catégories ;",
+        sec3Li4: "évaluations et notes ;",
+        sec3Li5: "images associées aux questions ;",
+        sec3Li6: "paramètres de l'application ;",
+        sec3Li7: "paramètres de notification et horaires de révision ;",
+        sec3Li8: "autres informations nécessaires au fonctionnement de l'application.",
+        sec3BoxTitle: "Stockage local",
+        sec3BoxText: "Ces données sont stockées localement dans la zone de données de l'application sur l'appareil de l'utilisateur.",
+        sec3P2: "G Drako Interactive ne gère pas son propre serveur ou base de données distante pour conserver ce contenu personnel de l'utilisateur.",
+        sec3P3: "La désinstallation de l'application ou la suppression des données de l'application via les paramètres de l'appareil peut entraîner la suppression des données stockées localement.",
+        sec4Title: "4. Évaluation des réponses par intelligence artificielle",
+        sec4P1: "Memorizer propose une fonctionnalité permettant d'utiliser un service d'intelligence artificielle pour évaluer une réponse fournie par l'utilisateur.",
+        sec4BoxTitle: "Quand l'IA est-elle utilisée ?",
+        sec4BoxText: "Les informations sont transmises au service d'IA lorsque l'utilisateur choisit d'utiliser la fonctionnalité d'évaluation par intelligence artificielle.",
+        sec4P2: "Pour effectuer l'évaluation, l'application peut envoyer à TypeSafe AI :",
+        sec4Li1: "la question ;",
+        sec4Li2: "la réponse fournie par l'utilisateur ;",
+        sec4Li3: "la réponse préalablement enregistrée, utilisée comme référence pour l'évaluation ;",
+        sec4Li4: "les instructions nécessaires au système d'intelligence artificielle pour effectuer l'évaluation.",
+        sec4P3: "G Drako Interactive n'utilise pas son propre système d'intelligence artificielle pour stocker ou entraîner des modèles sur les données des utilisateurs.",
+        sec4P4: "Selon la politique de confidentialité de TypeSafe AI, les données envoyées à ses services ne sont pas utilisées pour entraîner ou affiner des modèles d'intelligence artificielle.",
+        sec4P5: "Cependant, TypeSafe AI peut conserver les données pendant la période raisonnablement nécessaire à la fourniture de ses services ou à ses fins commerciales et légales.",
+        sec4WarnTitle: "Informations personnelles",
+        sec4WarnText: "Il est recommandé de ne pas inclure dans les questions ou réponses des informations personnelles, sensibles ou confidentielles qui ne sont pas nécessaires à l'utilisation de la fonctionnalité.",
+        sec4P6: "Les services de TypeSafe AI sont hébergés aux États-Unis. Ainsi, lorsque l'utilisateur utilise la fonctionnalité d'évaluation par IA, les données transmises peuvent être transférées aux États-Unis pour traitement.",
+        sec5Title: "5. Publicité et Google Mobile Ads",
+        sec5P1: "Memorizer peut utiliser Google Mobile Ads / AdMob pour afficher des annonces publicitaires.",
+        sec5P2: "Le SDK correspondant peut traiter des informations techniques et d'utilisation concernant l'appareil et l'application nécessaires pour fournir, mesurer et protéger le service publicitaire.",
+        sec5P3: "Selon les paramètres de consentement et les méthodes de diffusion des annonces, ces données peuvent inclure des identifiants publicitaires, des informations sur l'appareil, l'adresse IP, des données d'interaction avec les annonces et des informations techniques.",
+        sec5BoxTitle: "Consentement publicitaire",
+        sec5BoxText: "Pour les utilisateurs de l'Espace économique européen, du Royaume-Uni et de la Suisse, Memorizer peut afficher une interface de gestion du consentement relative à la publicité et au traitement des données.",
+        sec5P4: "L'utilisateur peut modifier ou retirer ses choix de consentement via les options de confidentialité de l'application, le cas échéant.",
+        sec5P5: "Les modalités de traitement des données par Google sont régies par les politiques de confidentialité et les conditions applicables aux services Google.",
+        sec6Title: "6. Données non collectées directement par Memorizer",
+        sec6P1: "Memorizer ne requiert pas :",
+        sec6Li1: "création de compte ;",
+        sec6Li2: "inscription obligatoire ;",
+        sec6Li3: "nom et prénom ;",
+        sec6Li4: "numéro de téléphone ;",
+        sec6Li5: "adresse postale ;",
+        sec6Li6: "mot de passe ;",
+        sec6Li7: "accès aux contacts du répertoire ;",
+        sec6Li8: "localisation GPS.",
+        sec6P2: "Le contenu personnel créé par l'utilisateur, comme les questions et réponses, n'est pas téléchargé sur un serveur appartenant à G Drako Interactive.",
+        sec6P3: "Le transfert de données vers des services tiers a lieu lorsqu'il est nécessaire pour une fonctionnalité utilisée par l'utilisateur, comme l'évaluation par IA, ou pour le fonctionnement des services publicitaires.",
+        sec7Title: "7. Finalités du traitement",
+        sec7P1: "Les données peuvent être traitées pour les finalités suivantes :",
+        sec7Li1: "fournir les fonctionnalités de Memorizer ;",
+        sec7Li2: "stocker localement le contenu créé par l'utilisateur ;",
+        sec7Li3: "évaluer les réponses via le service d'IA demandé par l'utilisateur ;",
+        sec7Li4: "fournir et afficher des annonces publicitaires ;",
+        sec7Li5: "mesurer et améliorer le fonctionnement des services tiers ;",
+        sec7Li6: "garantir la sécurité et prévenir les abus ou activités illégales ;",
+        sec7Li7: "respecter les obligations légales.",
+        sec8Title: "8. Base juridique",
+        sec8P1: "Selon le type de traitement, la base juridique peut inclure :",
+        sec8Li1: "l'exécution de la fonctionnalité demandée par l'utilisateur ;",
+        sec8Li2: "le consentement de l'utilisateur, lorsque la loi applicable l'exige ;",
+        sec8Li3: "la poursuite d'intérêts légitimes, si la loi applicable le permet ;",
+        sec8Li4: "le respect des obligations légales.",
+        sec8P2: "Pour la publicité et les traitements soumis au consentement, le consentement est demandé via les mécanismes prévus par les services de gestion du consentement utilisés dans l'application.",
+        sec9Title: "9. Conservation des données",
+        sec9P1: "Les données créées par l'utilisateur et stockées localement restent sur l'appareil jusqu'à ce que l'utilisateur les supprime, efface les données de l'application ou désinstalle l'application.",
+        sec9P2: "Les données transmises à TypeSafe AI sont soumises aux politiques de conservation de TypeSafe AI.",
+        sec9P3: "Les données traitées par Google pour la publicité sont soumises aux politiques et périodes de conservation applicables aux services Google.",
+        sec9P4: "G Drako Interactive ne conserve pas de manière indépendante sur ses propres serveurs les questions, réponses ou autres contenus créés par l'utilisateur.",
+        sec10Title: "10. Sécurité",
+        sec10P1: "G Drako Interactive prend des mesures raisonnables pour protéger les données gérées par l'application.",
+        sec10P2: "Les données transmises aux services en ligne utilisés par l'application sont envoyées via des connexions réseau sécurisées lorsque le service le permet.",
+        sec10P3: "Cependant, aucun système de stockage ou de transmission électronique ne peut être considéré comme totalement sécurisé.",
+        sec11Title: "11. Partage avec des tiers",
+        sec11P1: "Certaines données peuvent être transmises aux prestataires de services suivants :",
+        sec11S1: "Utilisé pour la fonctionnalité d'évaluation des réponses par intelligence artificielle.",
+        sec11S2: "Utilisé pour l'affichage et la gestion des annonces publicitaires.",
+        sec11P2: "Ces prestataires fonctionnent selon leurs propres politiques et conditions de confidentialité.",
+        sec11P3: "G Drako Interactive ne vend pas le contenu personnel créé par les utilisateurs.",
+        sec12Title: "12. Droits des utilisateurs",
+        sec12P1: "Selon la réglementation applicable, les utilisateurs peuvent disposer de droits concernant leurs données personnelles, notamment :",
+        sec12Li1: "droit d'accès ;",
+        sec12Li2: "droit de rectification ;",
+        sec12Li3: "droit à l'effacement ;",
+        sec12Li4: "droit à la limitation du traitement ;",
+        sec12Li5: "droit d'opposition ;",
+        sec12Li6: "droit à la portabilité des données, le cas échéant ;",
+        sec12Li7: "droit de retirer son consentement lorsque le traitement est fondé sur le consentement.",
+        sec12P2: "Pour exercer vos droits ou demander des informations sur le traitement des données, vous pouvez contacter :",
+        sec12P3: "La plupart des données créées par l'utilisateur étant stockées localement sur l'appareil, la suppression des données locales peut être effectuée directement par l'utilisateur via les fonctionnalités de l'application, en effaçant les données ou en désinstallant Memorizer.",
+        sec13Title: "13. Mineurs",
+        sec13P1: "Memorizer n'est pas spécifiquement conçue pour les enfants.",
+        sec13P2: "G Drako Interactive n'a pas l'intention de collecter sciemment des données personnelles de mineurs via ses systèmes.",
+        sec13P3: "L'utilisation des services tiers intégrés est également soumise à leurs conditions d'âge et politiques respectives.",
+        sec14Title: "14. Services et politiques de tiers",
+        sec14P1: "Pour plus d'informations sur le traitement des données par les services utilisés par Memorizer, vous pouvez consulter leurs politiques de confidentialité :",
+        sec14L1: "Politique de confidentialité de TypeSafe AI",
+        sec14L2: "Politique de confidentialité de Google",
+        sec14L3: "À propos de Google AdMob",
+        sec15Title: "15. Modifications de la politique de confidentialité",
+        sec15P1: "G Drako Interactive peut modifier cette politique de confidentialité si nécessaire, par exemple en cas de mises à jour de l'application, des services ou de la législation.",
+        sec15P2: "La version mise à jour sera publiée sur cette page avec la date de mise à jour correspondante.",
+        sec16Title: "16. Contacts",
+        sec16P1: "Pour toute question, demande ou communication concernant la confidentialité et le traitement des données :",
+        sec17Title: "17. Informations sur l'application",
+        sec17L1: "Nom :",
+        sec17L2: "Développeur :",
+        sec17L3: "Plateforme :",
+        footerPub: "Publiée par G Drako Interactive",
+        footerRights: "© 2026 G Drako Interactive. Tous droits réservés."
+    },
+    es: {
+        docTitle: "Política de Privacidad — Memorizer",
+        docDesc: "Política de Privacidad de Memorizer, aplicación para Android publicada por G Drako Interactive.",
+        titleMain: "Política de Privacidad",
+        lastUpdated: "Última actualización: 5 de octubre de 2026",
+        tocTitle: "Índice",
+        toc1: "Propietario y desarrollador",
+        toc2: "Información general",
+        toc3: "Datos almacenados localmente",
+        toc4: "Evaluación mediante inteligencia artificial",
+        toc5: "Publicidad y Google Mobile Ads",
+        toc6: "Datos no recopilados directamente",
+        toc7: "Fines del tratamiento",
+        toc8: "Base legal",
+        toc9: "Conservación de datos",
+        toc10: "Seguridad",
+        toc11: "Compartir con terceros",
+        toc12: "Derechos de los usuarios",
+        toc13: "Menores",
+        toc14: "Servicios y políticas de terceros",
+        toc15: "Cambios en la Política de Privacidad",
+        toc16: "Contactos",
+        toc17: "Información de la aplicación",
+        sec1Title: "1. Propietario y desarrollador",
+        sec1P1: "Esta Política de Privacidad describe cómo la aplicación móvil <strong>Memorizer</strong> gestiona los datos de los usuarios.",
+        sec1DevLabel: "Desarrollador",
+        sec1EmailLabel: "Correo electrónico de contacto",
+        sec1P2: "Para cualquier pregunta sobre privacidad o tratamiento de datos, puede ponerse en contacto con el desarrollador mediante el correo indicado anteriormente.",
+        sec2Title: "2. Información general",
+        sec2P1: "Memorizer es una aplicación para dispositivos Android diseñada para ayudar al usuario a estudiar y memorizar mediante preguntas, respuestas, categorías, evaluaciones y funciones de repaso.",
+        sec2P2: "La aplicación no requiere crear una cuenta, ni registro, nombre, correo electrónico o contraseña para ser utilizada.",
+        sec2P3: "Los datos creados directamente por el usuario dentro de la aplicación se almacenan normalmente de forma local en el dispositivo.",
+        sec2P4: "Sin embargo, algunas funciones utilizan servicios de terceros, en particular:",
+        sec2Li1: "TypeSafe AI para evaluar respuestas mediante inteligencia artificial;",
+        sec2Li2: "Google Mobile Ads / AdMob para publicidad.",
+        sec2P5: "El uso de estas funciones puede implicar la transferencia y el tratamiento de ciertos datos fuera del dispositivo.",
+        sec3Title: "3. Datos almacenados localmente en el dispositivo",
+        sec3P1: "La información creada y utilizada por el usuario en Memorizer puede incluir:",
+        sec3Li1: "preguntas;",
+        sec3Li2: "respuestas;",
+        sec3Li3: "categorías;",
+        sec3Li4: "evaluaciones y calificaciones;",
+        sec3Li5: "imágenes asociadas a las preguntas;",
+        sec3Li6: "configuraciones de la aplicación;",
+        sec3Li7: "configuraciones de notificaciones y horarios de repaso;",
+        sec3Li8: "otra información necesaria para el funcionamiento de la aplicación.",
+        sec3BoxTitle: "Almacenamiento local",
+        sec3BoxText: "Estos datos se almacenan localmente en el área de datos de la aplicación en el dispositivo del usuario.",
+        sec3P2: "G Drako Interactive no gestiona un servidor ni una base de datos remota para conservar este contenido personal del usuario.",
+        sec3P3: "Desinstalar la aplicación o borrar los datos de la aplicación a través de la configuración del dispositivo puede provocar la eliminación de los datos almacenados localmente.",
+        sec4Title: "4. Evaluación de respuestas mediante inteligencia artificial",
+        sec4P1: "Memorizer ofrece una función que permite utilizar un servicio de inteligencia artificial para evaluar una respuesta proporcionada por el usuario.",
+        sec4BoxTitle: "¿Cuándo se utiliza la IA?",
+        sec4BoxText: "La información se transmite al servicio de IA cuando el usuario elige utilizar la función de evaluación mediante inteligencia artificial.",
+        sec4P2: "Para realizar la evaluación, la aplicación puede enviar a TypeSafe AI:",
+        sec4Li1: "la pregunta;",
+        sec4Li2: "la respuesta proporcionada por el usuario;",
+        sec4Li3: "la respuesta almacenada anteriormente, utilizada como referencia para la evaluación;",
+        sec4Li4: "las instrucciones necesarias para que el sistema de inteligencia artificial realice la evaluación.",
+        sec4P3: "G Drako Interactive no utiliza un sistema propio de inteligencia artificial para almacenar o entrenar modelos con los datos del usuario.",
+        sec4P4: "Según la Política de Privacidad de TypeSafe AI, las entradas enviadas a sus servicios no se utilizan para entrenar o ajustar modelos de inteligencia artificial.",
+        sec4P5: "Sin embargo, TypeSafe AI puede conservar los datos durante el período razonablemente necesario para prestar sus servicios o para sus fines comerciales y legales.",
+        sec4WarnTitle: "Información personal",
+        sec4WarnText: "Se recomienda no incluir en las preguntas o respuestas información personal, sensible o confidencial que no sea necesaria para utilizar la función.",
+        sec4P6: "Los servicios de TypeSafe AI están alojados en los Estados Unidos. Por lo tanto, cuando el usuario utiliza la función de evaluación por IA, los datos enviados pueden ser transferidos a los Estados Unidos para su procesamiento.",
+        sec5Title: "5. Publicidad y Google Mobile Ads",
+        sec5P1: "Memorizer puede utilizar Google Mobile Ads / AdMob para mostrar anuncios publicitarios.",
+        sec5P2: "El SDK correspondiente puede tratar información técnica y de uso del dispositivo y de la aplicación necesaria para proporcionar, medir y proteger el servicio publicitario.",
+        sec5P3: "Según las configuraciones de consentimiento y los métodos de publicación de anuncios, estos datos pueden incluir identificadores publicitarios, información del dispositivo, dirección IP, datos de interacción con anuncios e información técnica.",
+        sec5BoxTitle: "Consentimiento publicitario",
+        sec5BoxText: "Para usuarios en el Espacio Económico Europeo, el Reino Unido y Suiza, Memorizer puede mostrar una interfaz para la gestión del consentimiento relativa a la publicidad y el tratamiento de datos.",
+        sec5P4: "El usuario puede modificar o revocar sus elecciones de consentimiento a través de las opciones de privacidad disponibles en la aplicación, cuando corresponda.",
+        sec5P5: "El tratamiento de datos por parte de Google se rige por las políticas de privacidad y condiciones aplicables a los servicios de Google.",
+        sec6Title: "6. Datos no recopilados directamente por Memorizer",
+        sec6P1: "Memorizer no requiere:",
+        sec6Li1: "creación de cuenta;",
+        sec6Li2: "registro obligatorio;",
+        sec6Li3: "nombre y apellidos;",
+        sec6Li4: "número de teléfono;",
+        sec6Li5: "dirección postal;",
+        sec6Li6: "contraseña;",
+        sec6Li7: "acceso a los contactos de la agenda;",
+        sec6Li8: "ubicación GPS.",
+        sec6P2: "El contenido personal creado por el usuario, como preguntas y respuestas, no se carga en ningún servidor propiedad de G Drako Interactive.",
+        sec6P3: "La transferencia de datos a servicios de terceros se realiza cuando es necesaria para una función utilizada por el usuario, como la evaluación mediante IA, o para el funcionamiento de servicios publicitarios.",
+        sec7Title: "7. Fines del tratamiento",
+        sec7P1: "Los datos pueden ser tratados para los siguientes fines:",
+        sec7Li1: "proporcionar las funciones de Memorizer;",
+        sec7Li2: "almacenar localmente el contenido creado por el usuario;",
+        sec7Li3: "evaluar respuestas mediante el servicio de IA solicitado por el usuario;",
+        sec7Li4: "proporcionar y mostrar anuncios publicitarios;",
+        sec7Li5: "medir y mejorar el funcionamiento de servicios de terceros;",
+        sec7Li6: "garantizar la seguridad y prevenir abusos o actividades ilícitas;",
+        sec7Li7: "cumplir con las obligaciones legales.",
+        sec8Title: "8. Base legal",
+        sec8P1: "Según el tipo de tratamiento, la base legal puede incluir:",
+        sec8Li1: "la ejecución de la función solicitada por el usuario;",
+        sec8Li2: "el consentimiento del usuario, cuando lo exija la legislación aplicable;",
+        sec8Li3: "la persecución de intereses legítimos, siempre que lo permita la legislación aplicable;",
+        sec8Li4: "el cumplimiento de obligaciones legales.",
+        sec8P2: "Para la publicidad y los tratamientos sujetos a consentimiento, el consentimiento se solicita mediante los mecanismos previstos por los servicios de gestión de consentimiento utilizados en la aplicación.",
+        sec9Title: "9. Conservación de datos",
+        sec9P1: "Los datos creados por el usuario y almacenados localmente permanecen en el dispositivo hasta que el usuario los elimine, borre los datos de la aplicación o desinstale la aplicación.",
+        sec9P2: "Los datos transmitidos a TypeSafe AI están sujetos a las políticas de conservación de TypeSafe AI.",
+        sec9P3: "Los datos tratados por Google para publicidad están sujetos a las políticas y períodos de conservación aplicables a los servicios de Google.",
+        sec9P4: "G Drako Interactive no conserva de forma independiente en sus propios servidores las preguntas, respuestas u otros contenidos creados por el usuario.",
+        sec10Title: "10. Seguridad",
+        sec10P1: "G Drako Interactive adopta medidas razonables para proteger los datos gestionados por la aplicación.",
+        sec10P2: "Los datos transmitidos a servicios en línea utilizados por la aplicación se envían mediante conexiones de red seguras cuando lo permite el servicio correspondiente.",
+        sec10P3: "Sin embargo, ningún sistema de almacenamiento o transmisión electrónica puede considerarse totalmente seguro.",
+        sec11Title: "11. Compartir con terceros",
+        sec11P1: "Ciertos datos pueden ser transmitidos a los siguientes proveedores de servicios:",
+        sec11S1: "Utilizado para la función de evaluación de respuestas mediante inteligencia artificial.",
+        sec11S2: "Utilizado para la visualización y gestión de anuncios publicitarios.",
+        sec11P2: "Estos proveedores operan según sus propias políticas y condiciones de privacidad.",
+        sec11P3: "G Drako Interactive no vende el contenido personal creado por los usuarios.",
+        sec12Title: "12. Derechos de los usuarios",
+        sec12P1: "Según la normativa aplicable, los usuarios pueden tener derechos sobre sus datos personales, entre ellos:",
+        sec12Li1: "derecho de acceso;",
+        sec12Li2: "derecho de rectificación;",
+        sec12Li3: "derecho de supresión;",
+        sec12Li4: "derecho a la limitación del tratamiento;",
+        sec12Li5: "derecho de oposición;",
+        sec12Li6: "derecho a la portabilidad de los datos, cuando sea aplicable;",
+        sec12Li7: "derecho a retirar el consentimiento cuando el tratamiento se base en él.",
+        sec12P2: "Para ejercer sus derechos o solicitar información sobre el tratamiento de datos, puede ponerse en contacto con:",
+        sec12P3: "Dado que la mayoría de los datos creados por el usuario se almacenan localmente en el dispositivo y no en servidores de G Drako Interactive, la eliminación de datos locales puede realizarla directamente el usuario a través de la app, borrando los datos de la app o desinstalando Memorizer.",
+        sec13Title: "13. Menores",
+        sec13P1: "Memorizer no está diseñada específicamente para niños.",
+        sec13P2: "G Drako Interactive no pretende recopilar a sabelotodo datos personales de menores a través de sus sistemas.",
+        sec13P3: "El uso de servicios de terceros integrados también está sujeto a sus respectivos requisitos de edad y políticas.",
+        sec14Title: "14. Servicios y políticas de terceros",
+        sec14P1: "Para obtener más información sobre el tratamiento de datos por parte de los servicios utilizados por Memorizer, puede consultar las políticas de sus respectivos proveedores:",
+        sec14L1: "Política de Privacidad de TypeSafe AI",
+        sec14L2: "Política de Privacidad de Google",
+        sec14L3: "Información sobre Google AdMob",
+        sec15Title: "15. Cambios en la Política de Privacidad",
+        sec15P1: "G Drako Interactive puede modificar esta Política de Privacidad cuando sea necesario, por ejemplo en caso de actualizaciones de la app, servicios o leyes aplicables.",
+        sec15P2: "La versión actualizada se publicará en esta página indicando la fecha de actualización correspondiente.",
+        sec16Title: "16. Contactos",
+        sec16P1: "Para preguntas, solicitudes o comunicaciones relativas a la privacidad y al tratamiento de datos:",
+        sec17Title: "17. Información de la aplicación",
+        sec17L1: "Nombre:",
+        sec17L2: "Desarrollador:",
+        sec17L3: "Plataforma:",
+        footerPub: "Publicada por G Drako Interactive",
+        footerRights: "© 2026 G Drako Interactive. Todos los derechos reservados."
+    },
+    de: {
+        docTitle: "Datenschutzerklärung — Memorizer",
+        docDesc: "Datenschutzerklärung von Memorizer, einer Android-Anwendung, herausgegeben von G Drako Interactive.",
+        titleMain: "Datenschutzerklärung",
+        lastUpdated: "Letzte Aktualisierung: 5. Oktober 2026",
+        tocTitle: "Inhaltsverzeichnis",
+        toc1: "Inhaber und Entwickler",
+        toc2: "Allgemeine Informationen",
+        toc3: "Lokal gespeicherte Daten",
+        toc4: "Bewertung durch künstliche Intelligenz",
+        toc5: "Werbung und Google Mobile Ads",
+        toc6: "Nicht direkt erhobene Daten",
+        toc7: "Zwecke der Verarbeitung",
+        toc8: "Rechtsgrundlage",
+        toc9: "Datenspeicherung",
+        toc10: "Sicherheit",
+        toc11: "Weitergabe an Dritte",
+        toc12: "Rechte der Nutzer",
+        toc13: "Minderjährige",
+        toc14: "Dienste und Richtlinien Dritter",
+        toc15: "Änderungen dieser Datenschutzerklärung",
+        toc16: "Kontakte",
+        toc17: "Informationen zur Anwendung",
+        sec1Title: "1. Inhaber und Entwickler",
+        sec1P1: "Diese Datenschutzerklärung beschreibt, wie die mobile Anwendung <strong>Memorizer</strong> Nutzerdaten verwaltet.",
+        sec1DevLabel: "Entwickler",
+        sec1EmailLabel: "Kontakt-E-Mail",
+        sec1P2: "Bei Fragen zum Datenschutz oder zur Datenverarbeitung können Sie den Entwickler unter der oben genannten E-Mail-Adresse kontaktieren.",
+        sec2Title: "2. Allgemeine Informationen",
+        sec2P1: "Memorizer ist eine Anwendung für Android-Geräte, die Nutzern beim Lernen und Einprägen mithilfe von Fragen, Antworten, Kategorien, Bewertungen und Wiederholungsfunktionen hilft.",
+        sec2P2: "Die Anwendung erfordert weder die Erstellung eines Kontos noch eine Registrierung, Namen, E-Mail-Adresse oder Passwort zur Nutzung.",
+        sec2P3: "Vom Nutzer direkt in der Anwendung erstellte Daten werden normalerweise lokal auf dem Gerät gespeichert.",
+        sec2P4: "Einige Funktionen nutzen jedoch Dienste von Drittanbietern, insbesondere:",
+        sec2Li1: "TypeSafe AI zur Bewertung von Antworten mittels künstlicher Intelligenz;",
+        sec2Li2: "Google Mobile Ads / AdMob für Werbung.",
+        sec2P5: "Die Nutzung dieser Funktionen kann die Übertragung und Verarbeitung bestimmter Daten außerhalb des Geräts beinhalten.",
+        sec3Title: "3. Lokal auf dem Gerät gespeicherte Daten",
+        sec3P1: "Vom Nutzer in Memorizer erstellte und genutzte Informationen können umfassen:",
+        sec3Li1: "Fragen;",
+        sec3Li2: "Antworten;",
+        sec3Li3: "Kategorien;",
+        sec3Li4: "Bewertungen und Noten;",
+        sec3Li5: "mit Fragen verknüpfte Bilder;",
+        sec3Li6: "Anwendungseinstellungen;",
+        sec3Li7: "Benachrichtigungseinstellungen und Wiederholungspläne;",
+        sec3Li8: "weitere für die Funktion der Anwendung erforderliche Informationen.",
+        sec3BoxTitle: "Lokale Speicherung",
+        sec3BoxText: "Diese Daten werden lokal im Datenbereich der Anwendung auf dem Gerät des Nutzers gespeichert.",
+        sec3P2: "G Drako Interactive betreibt keinen eigenen Remote-Server oder eine Datenbank zur Speicherung dieser persönlichen Nutzerinhalte.",
+        sec3P3: "Das Deinstallieren der Anwendung oder das Löschen von Anwendungsdaten über die Geräteeinstellungen kann zur Löschung der lokal gespeicherten Daten führen.",
+        sec4Title: "4. Bewertung von Antworten durch künstliche Intelligenz",
+        sec4P1: "Memorizer bietet eine Funktion zur Nutzung eines Dienstes für künstliche Intelligenz zur Bewertung einer vom Nutzer eingegebenen Antwort.",
+        sec4BoxTitle: "Wann wird KI verwendet?",
+        sec4BoxText: "Informationen werden an den KI-Dienst übertragen, wenn der Nutzer die Funktion zur KI-Bewertung auswählt.",
+        sec4P2: "Zur Durchführung der Bewertung kann die Anwendung an TypeSafe AI senden:",
+        sec4Li1: "die Frage;",
+        sec4Li2: "die vom Nutzer eingegebene Antwort;",
+        sec4Li3: "die zuvor gespeicherte Antwort als Referenz für die Bewertung;",
+        sec4Li4: "Anweisungen, die das KI-System zur Durchführung der Bewertung benötigt.",
+        sec4P3: "G Drako Interactive nutzt kein eigenes KI-System, um Modelle mit Nutzerdaten zu speichern oder zu trainieren.",
+        sec4P4: "Gemäß der Datenschutzerklärung von TypeSafe AI werden an seine Dienste gesendete Eingaben nicht zum Trainieren oder Feintunen von KI-Modellen verwendet.",
+        sec4P5: "TypeSafe AI kann Daten jedoch für den Zeitraum aufbewahren, der für die Bereitstellung seiner Dienste oder für geschäftliche und rechtliche Zwecke erforderlich ist.",
+        sec4WarnTitle: "Persönliche Informationen",
+        sec4WarnText: "Es wird empfohlen, keine persönlichen, sensiblen oder vertraulichen Informationen in Fragen oder Antworten einzufügen, die nicht für die Nutzung der Funktion erforderlich sind.",
+        sec4P6: "Die Dienste von TypeSafe AI werden in den USA gehostet. Wenn der Nutzer die KI-Bewertungsfunktion nutzt, können die übermittelten Daten zur Verarbeitung in die USA übertragen werden.",
+        sec5Title: "5. Werbung und Google Mobile Ads",
+        sec5P1: "Memorizer kann Google Mobile Ads / AdMob zur Anzeige von Werbeanzeigen nutzen.",
+        sec5P2: "Das entsprechende SDK kann technische und Nutzungs-Informationen bezüglich des Geräts und der Anwendung verarbeiten, die zur Bereitstellung, Messung und zum Schutz des Werbedienstes erforderlich sind.",
+        sec5P3: "Je nach Einwilligungseinstellungen und Anzeigenbereitstellung können diese Daten Werbe-IDs, Geräteinformationen, IP-Adresse, Interaktionsdaten und technische Informationen umfassen.",
+        sec5BoxTitle: "Einwilligung in Werbung",
+        sec5BoxText: "Für Nutzer im Europäischen Wirtschaftsraum, im Vereinigten Königreich und in der Schweiz kann Memorizer eine Schnittstelle zur Einwilligungsverwaltung für Werbung und Datenverarbeitung anzeigen.",
+        sec5P4: "Der Nutzer kann seine Einwilligung über die in der Anwendung bereitgestellten Datenschutzoptionen ändern oder widerrufen.",
+        sec5P5: "Die Datenverarbeitungsmethoden von Google unterliegen den für Google-Dienste geltenden Datenschutzrichtlinien und -bedingungen.",
+        sec6Title: "6. Nicht direkt von Memorizer erhobene Daten",
+        sec6P1: "Memorizer erfordert keine:",
+        sec6Li1: "Kontoerstellung;",
+        sec6Li2: "Pflichtregistrierung;",
+        sec6Li3: "Vor- und Nachnamen;",
+        sec6Li4: "Telefonnummer;",
+        sec6Li5: "Wohnadresse;",
+        sec6Li6: "Passwort;",
+        sec6Li7: "Zugriff auf Telefonbuchkontakte;",
+        sec6Li8: "GPS-Standort.",
+        sec6P2: "Vom Nutzer erstellte persönliche Inhalte wie Fragen und Antworten werden nicht auf Server von G Drako Interactive hochgeladen.",
+        sec6P3: "Die Übertragung von Daten an Drittanbieter erfolgt, wenn dies für eine vom Nutzer genutzte Funktion (z. B. KI-Bewertung) oder für den Betrieb von Werbediensten erforderlich ist.",
+        sec7Title: "7. Zwecke der Verarbeitung",
+        sec7P1: "Daten können zu folgenden Zwecken verarbeitet werden:",
+        sec7Li1: "Bereitstellung der Funktionen von Memorizer;",
+        sec7Li2: "lokale Speicherung von vom Nutzer erstellten Inhalten;",
+        sec7Li3: "Bewertung von Antworten über den vom Nutzer angeforderten KI-Dienst;",
+        sec7Li4: "Bereitstellung und Anzeige von Werbeanzeigen;",
+        sec7Li5: "Messung und Verbesserung der Funktion von Drittanbieterdiensten;",
+        sec7Li6: "Gewährleistung der Sicherheit und Verhinderung von Missbrauch oder illegalen Aktivitäten;",
+        sec7Li7: "Erfüllung rechtlicher Verpflichtungen.",
+        sec8Title: "8. Rechtsgrundlage",
+        sec8P1: "Je nach Art der Verarbeitung kann die Rechtsgrundlage umfassen:",
+        sec8Li1: "die Ausführung der vom Nutzer angeforderten Funktion;",
+        sec8Li2: "die Einwilligung des Nutzers, sofern gesetzlich vorgeschrieben;",
+        sec8Li3: "die Wahrung berechtigter Interessen, soweit gesetzlich zulässig;",
+        sec8Li4: "die Erfüllung rechtlicher Verpflichtungen.",
+        sec8P2: "Für Werbung und einwilligungspflichtige Verarbeitungen wird die Einwilligung über Mechanismen der in der Anwendung genutzten Einwilligungsverwaltungsdienste eingeholt.",
+        sec9Title: "9. Datenspeicherung",
+        sec9P1: "Vom Nutzer erstellte und lokal gespeicherte Daten verbleiben auf dem Gerät, bis der Nutzer sie löscht, Anwendungsdaten löscht oder die Anwendung deinstalliert.",
+        sec9P2: "An TypeSafe AI übermittelte Daten unterliegen den Speicherrichtlinien von TypeSafe AI.",
+        sec9P3: "Von Google für Werbung verarbeitete Daten unterliegen den für Google-Dienste geltenden Richtlinien und Speicherfristen.",
+        sec9P4: "G Drako Interactive speichert Nutzerfragen, -antworten oder andere erstellte Inhalte nicht eigenständig auf eigenen Servern.",
+        sec10Title: "10. Sicherheit",
+        sec10P1: "G Drako Interactive ergreift angemessene Maßnahmen zum Schutz der von der Anwendung verwalteten Daten.",
+        sec10P2: "An Online-Dienste übermittelte Daten werden über sichere Netzwerkverbindungen übertragen, sofern dies vom jeweiligen Dienst unterstützt wird.",
+        sec10P3: "Es kann jedoch kein elektronisches Speicher- oder Übertragungssystem als vollkommen sicher garantiert werden.",
+        sec11Title: "11. Weitergabe an Dritte",
+        sec11P1: "Bestimmte Daten können an folgende Dienstleister übermittelt werden:",
+        sec11S1: "Verwendet für die Bewertung von Antworten mittels künstlicher Intelligenz.",
+        sec11S2: "Verwendet für die Anzeige und Verwaltung von Werbeanzeigen.",
+        sec11P2: "Diese Anbieter handeln nach ihren eigenen Datenschutzrichtlinien und -bedingungen.",
+        sec11P3: "G Drako Interactive verkauft keine von Nutzern erstellten persönlichen Inhalte.",
+        sec12Title: "12. Rechte der Nutzer",
+        sec12P1: "Nach geltendem Recht können Nutzern Rechte bezüglich ihrer personenbezogenen Daten zustehen, darunter:",
+        sec12Li1: "Auskunftsrecht;",
+        sec12Li2: "Recht auf Berichtigung;",
+        sec12Li3: "Recht auf Löschung;",
+        sec12Li4: "Recht auf Einschränkung der Verarbeitung;",
+        sec12Li5: "Widerspruchsrecht;",
+        sec12Li6: "Recht auf Datenübertragbarkeit, soweit anwendbar;",
+        sec12Li7: "Recht auf Widerruf der Einwilligung, wenn die Verarbeitung auf einer Einwilligung beruht.",
+        sec12P2: "Zur Ausübung von Rechten oder für Anfragen zur Datenverarbeitung wenden Sie sich bitte an:",
+        sec12P3: "Da die meisten Nutzerdaten lokal auf dem Gerät gespeichert werden, kann die Datenlöschung direkt vom Nutzer über App-Funktionen, das Löschen von App-Daten oder die Deinstallation von Memorizer durchgeführt werden.",
+        sec13Title: "13. Minderjährige",
+        sec13P1: "Memorizer ist nicht speziell für Kinder konzipiert.",
+        sec13P2: "G Drako Interactive beabsichtigt nicht, wissentlich personenbezogene Daten von Minderjährigen über eigene Systeme zu erheben.",
+        sec13P3: "Die Nutzung integrierter Drittanbieterdienste unterliegt ebenfalls deren Altersanforderungen und Richtlinien.",
+        sec14Title: "14. Dienste und Richtlinien Dritter",
+        sec14P1: "Weitere Informationen zur Datenverarbeitung durch die von Memorizer genutzten Dienste finden Sie in den Richtlinien der jeweiligen Anbieter:",
+        sec14L1: "TypeSafe AI Datenschutzerklärung",
+        sec14L2: "Google Datenschutzerklärung",
+        sec14L3: "Über Google AdMob",
+        sec15Title: "15. Änderungen dieser Datenschutzerklärung",
+        sec15P1: "G Drako Interactive kann diese Datenschutzerklärung bei Bedarf anpassen, z. B. bei Aktualisierungen der App, der genutzten Dienste oder der Gesetzgebung.",
+        sec15P2: "Die aktualisierte Version wird auf dieser Seite mit dem entsprechenden Aktualisierungsdatum veröffentlicht.",
+        sec16Title: "16. Kontakte",
+        sec16P1: "Bei Fragen, Anfragen oder Mitteilungen zum Datenschutz und zur Datenverarbeitung:",
+        sec17Title: "17. Informationen zur Anwendung",
+        sec17L1: "Name:",
+        sec17L2: "Entwickler:",
+        sec17L3: "Plattform:",
+        footerPub: "Herausgegeben von G Drako Interactive",
+        footerRights: "© 2026 G Drako Interactive. Alle Rechte vorbehalten."
+    }
+};
+
+function changeLanguage(lang) {
+    const t = translations[lang];
+    if (!t) return;
+
+    // Head
+    document.documentElement.lang = lang;
+    document.title = t.docTitle;
+    document.getElementById('doc-desc').setAttribute('content', t.docDesc);
+
+    // Intro & TOC
+    document.getElementById('title-main').textContent = t.titleMain;
+    document.getElementById('last-updated').textContent = t.lastUpdated;
+    document.getElementById('toc-title').textContent = t.tocTitle;
+    for (let i = 1; i <= 17; i++) {
+        const el = document.getElementById(`toc-${i}`);
+        if (el) el.textContent = t[`toc${i}`];
+    }
+
+    // Section 1
+    document.getElementById('sec1-title').textContent = t.sec1Title;
+    document.getElementById('sec1-p1').innerHTML = t.sec1P1;
+    document.getElementById('sec1-dev-label').textContent = t.sec1DevLabel;
+    document.getElementById('sec1-email-label').textContent = t.sec1EmailLabel;
+    document.getElementById('sec1-p2').textContent = t.sec1P2;
+
+    // Section 2
+    document.getElementById('sec2-title').textContent = t.sec2Title;
+    document.getElementById('sec2-p1').textContent = t.sec2P1;
+    document.getElementById('sec2-p2').textContent = t.sec2P2;
+    document.getElementById('sec2-p3').textContent = t.sec2P3;
+    document.getElementById('sec2-p4').textContent = t.sec2P4;
+    document.getElementById('sec2-li1').textContent = t.sec2Li1;
+    document.getElementById('sec2-li2').textContent = t.sec2Li2;
+    document.getElementById('sec2-p5').textContent = t.sec2P5;
+
+    // Section 3
+    document.getElementById('sec3-title').textContent = t.sec3Title;
+    document.getElementById('sec3-p1').textContent = t.sec3P1;
+    for (let i = 1; i <= 8; i++) {
+        const el = document.getElementById(`sec3-li${i}`);
+        if (el) el.textContent = t[`sec3Li${i}`];
+    }
+    document.getElementById('sec3-box-title').textContent = t.sec3BoxTitle;
+    document.getElementById('sec3-box-text').textContent = t.sec3BoxText;
+    document.getElementById('sec3-p2').textContent = t.sec3P2;
+    document.getElementById('sec3-p3').textContent = t.sec3P3;
+
+    // Section 4
+    document.getElementById('sec4-title').textContent = t.sec4Title;
+    document.getElementById('sec4-p1').textContent = t.sec4P1;
+    document.getElementById('sec4-box-title').textContent = t.sec4BoxTitle;
+    document.getElementById('sec4-box-text').textContent = t.sec4BoxText;
+    document.getElementById('sec4-p2').textContent = t.sec4P2;
+    for (let i = 1; i <= 4; i++) {
+        const el = document.getElementById(`sec4-li${i}`);
+        if (el) el.textContent = t[`sec4Li${i}`];
+    }
+    document.getElementById('sec4-p3').textContent = t.sec4P3;
+    document.getElementById('sec4-p4').textContent = t.sec4P4;
+    document.getElementById('sec4-p5').textContent = t.sec4P5;
+    document.getElementById('sec4-warn-title').textContent = t.sec4WarnTitle;
+    document.getElementById('sec4-warn-text').textContent = t.sec4WarnText;
+    document.getElementById('sec4-p6').textContent = t.sec4P6;
+
+    // Section 5
+    document.getElementById('sec5-title').textContent = t.sec5Title;
+    document.getElementById('sec5-p1').textContent = t.sec5P1;
+    document.getElementById('sec5-p2').textContent = t.sec5P2;
+    document.getElementById('sec5-p3').textContent = t.sec5P3;
+    document.getElementById('sec5-box-title').textContent = t.sec5BoxTitle;
+    document.getElementById('sec5-box-text').textContent = t.sec5BoxText;
+    document.getElementById('sec5-p4').textContent = t.sec5P4;
+    document.getElementById('sec5-p5').textContent = t.sec5P5;
+
+    // Section 6
+    document.getElementById('sec6-title').textContent = t.sec6Title;
+    document.getElementById('sec6-p1').textContent = t.sec6P1;
+    for (let i = 1; i <= 8; i++) {
+        const el = document.getElementById(`sec6-li${i}`);
+        if (el) el.textContent = t[`sec6Li${i}`];
+    }
+    document.getElementById('sec6-p2').textContent = t.sec6P2;
+    document.getElementById('sec6-p3').textContent = t.sec6P3;
+
+    // Section 7
+    document.getElementById('sec7-title').textContent = t.sec7Title;
+    document.getElementById('sec7-p1').textContent = t.sec7P1;
+    for (let i = 1; i <= 7; i++) {
+        const el = document.getElementById(`sec7-li${i}`);
+        if (el) el.textContent = t[`sec7Li${i}`];
+    }
+
+    // Section 8
+    document.getElementById('sec8-title').textContent = t.sec8Title;
+    document.getElementById('sec8-p1').textContent = t.sec8P1;
+    for (let i = 1; i <= 4; i++) {
+        const el = document.getElementById(`sec8-li${i}`);
+        if (el) el.textContent = t[`sec8Li${i}`];
+    }
+    document.getElementById('sec8-p2').textContent = t.sec8P2;
+
+    // Section 9
+    document.getElementById('sec9-title').textContent = t.sec9Title;
+    document.getElementById('sec9-p1').textContent = t.sec9P1;
+    document.getElementById('sec9-p2').textContent = t.sec9P2;
+    document.getElementById('sec9-p3').textContent = t.sec9P3;
+    document.getElementById('sec9-p4').textContent = t.sec9P4;
+
+    // Section 10
+    document.getElementById('sec10-title').textContent = t.sec10Title;
+    document.getElementById('sec10-p1').textContent = t.sec10P1;
+    document.getElementById('sec10-p2').textContent = t.sec10P2;
+    document.getElementById('sec10-p3').textContent = t.sec10P3;
+
+    // Section 11
+    document.getElementById('sec11-title').textContent = t.sec11Title;
+    document.getElementById('sec11-p1').textContent = t.sec11P1;
+    document.getElementById('sec11-s1').textContent = t.sec11S1;
+    document.getElementById('sec11-s2').textContent = t.sec11S2;
+    document.getElementById('sec11-p2').textContent = t.sec11P2;
+    document.getElementById('sec11-p3').textContent = t.sec11P3;
+
+    // Section 12
+    document.getElementById('sec12-title').textContent = t.sec12Title;
+    document.getElementById('sec12-p1').textContent = t.sec12P1;
+    for (let i = 1; i <= 7; i++) {
+        const el = document.getElementById(`sec12-li${i}`);
+        if (el) el.textContent = t[`sec12Li${i}`];
+    }
+    document.getElementById('sec12-p2').textContent = t.sec12P2;
+    document.getElementById('sec12-p3').textContent = t.sec12P3;
+
+    // Section 13
+    document.getElementById('sec13-title').textContent = t.sec13Title;
+    document.getElementById('sec13-p1').textContent = t.sec13P1;
+    document.getElementById('sec13-p2').textContent = t.sec13P2;
+    document.getElementById('sec13-p3').textContent = t.sec13P3;
+
+    // Section 14
+    document.getElementById('sec14-title').textContent = t.sec14Title;
+    document.getElementById('sec14-p1').textContent = t.sec14P1;
+    document.getElementById('sec14-l1').textContent = t.sec14L1;
+    document.getElementById('sec14-l2').textContent = t.sec14L2;
+    document.getElementById('sec14-l3').textContent = t.sec14L3;
+
+    // Section 15
+    document.getElementById('sec15-title').textContent = t.sec15Title;
+    document.getElementById('sec15-p1').textContent = t.sec15P1;
+    document.getElementById('sec15-p2').textContent = t.sec15P2;
+
+    // Section 16
+    document.getElementById('sec16-title').textContent = t.sec16Title;
+    document.getElementById('sec16-p1').textContent = t.sec16P1;
+
+    // Section 17
+    document.getElementById('sec17-title').textContent = t.sec17Title;
+    document.getElementById('sec17-l1').textContent = t.sec17L1;
+    document.getElementById('sec17-l2').textContent = t.sec17L2;
+    document.getElementById('sec17-l3').textContent = t.sec17L3;
+
+    // Footer
+    document.getElementById('footer-pub').textContent = t.footerPub;
+    document.getElementById('footer-rights').textContent = t.footerRights;
+}
+
+// Inizializza con la lingua inglese predefinita all'avvio
+document.addEventListener('DOMContentLoaded', () => {
+    changeLanguage('en');
+});
+</script>
+
+</body>
+</html>
